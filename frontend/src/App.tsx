@@ -1,11 +1,14 @@
-import { useState } from 'react'
+import {Route, Routes } from 'react-router-dom'
+import HomePage from './Pages/HomePage/HomePage'
 
 function App() {
 
   return (
-    <>
-      <h1 className='' >Hello World</h1>
-    </>
+    <Routes>
+      <Route path="/home" element={<HomePage />} />
+      <Route path='/dashboard' element={<p>Hello</p>} />
+
+    </Routes>
   )
 }
 
