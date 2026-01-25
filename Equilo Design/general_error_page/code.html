@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B600%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>BillSplit - Error</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #137fec;
+        --background-light: #f8fafc;
+        --background-dark: #0f172a;
+        --text-light: #0f172a;
+        --text-dark: #f8fafc;
+        --border-light: #e2e8f0;
+        --border-dark: #1e293b;
+      }
+      .dark {
+        --background-light: #0f172a;
+        --background-dark: #f8fafc;
+        --text-light: #f8fafc;
+        --text-dark: #0f172a;
+        --border-light: #1e293b;
+        --border-dark: #e2e8f0;
+      }
+    </style>
+</head>
+<body class="bg-[var(--background-light)] text-[var(--text-light)] font-sans">
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-light)] px-4 sm:px-6 lg:px-10 py-3">
+<div class="flex items-center gap-3 text-[var(--text-light)]">
+<div class="size-6 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold tracking-tight">BillSplit</h1>
+</div>
+<div class="flex items-center gap-4">
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-[var(--text-light)] hover:text-[var(--primary-color)] transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium text-[var(--text-light)] hover:text-[var(--primary-color)] transition-colors" href="#">Expenses</a>
+<a class="text-sm font-medium text-[var(--text-light)] hover:text-[var(--primary-color)] transition-colors" href="#">Groups</a>
+<a class="text-sm font-medium text-[var(--text-light)] hover:text-[var(--primary-color)] transition-colors" href="#">Activity</a>
+</nav>
+<div class="flex items-center gap-2">
+<button aria-label="Notifications" class="flex items-center justify-center rounded-full size-10 hover:bg-slate-200/60 dark:hover:bg-slate-700/60 transition-colors">
+<span class="material-symbols-outlined text-2xl"> notifications </span>
+</button>
+<button aria-label="User profile" class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-slate-200 dark:border-slate-700" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBEw9k_0tn-GFbrSaGE8L4ixap1-QxsVKX1JCZQ370n3qisf8KWufZ3ai197ENQ9sPQb1D2WCm-xqU7YkzvN6RmIacYbJLUTuTjUy8BlI1eES6tGIzHc7KXRrkhZyb9SSDnzswxaVZ7xiZsNSMsTrVdpU5wcemPHoCchv2dIZNHNVfUh0mLZyW_HFc-YJHm7leGPvoPJ7Yvv3iVqJahTIiYl7KRULgX31jI03FuxgHCTmtMGKor2KfC30X9dApIG5tiUs2sD5fishA");'></button>
+<button aria-label="Menu" class="md:hidden flex items-center justify-center rounded-full size-10 hover:bg-slate-200/60 dark:hover:bg-slate-700/60 transition-colors">
+<span class="material-symbols-outlined text-2xl"> menu </span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-1 items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-md text-center">
+<div class="mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30">
+<span class="material-symbols-outlined text-5xl text-red-500 dark:text-red-400"> error_outline </span>
+</div>
+<h2 class="text-3xl font-bold tracking-tight text-[var(--text-light)] sm:text-4xl">Oops! Something went wrong.</h2>
+<p class="mt-4 text-base text-slate-600 dark:text-slate-400">
+              We're sorry, but an unexpected error occurred. Our team has been notified. Please try refreshing the page, or come back later.
+            </p>
+<div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="flex w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-[var(--primary-color)] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary-color)]">
+<span class="material-symbols-outlined"> refresh </span>
+<span>Refresh</span>
+</button>
+<button class="flex w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-slate-100 px-6 py-3 text-sm font-semibold text-[var(--text-light)] shadow-sm transition-all hover:bg-slate-200 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700">
+<span class="material-symbols-outlined"> dashboard </span>
+<span>Go to Dashboard</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

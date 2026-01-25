@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BillSplit - Friend Details</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --brand-primary: #141414;
+            --brand-secondary: #4ade80;
+            --brand-text-primary: #141414;
+            --brand-text-secondary: #525252;
+            --brand-background: #f5f5f5;
+            --brand-surface: #ffffff;
+            --brand-border: #e5e5e5;
+            --brand-dark-primary: #ffffff;
+            --brand-dark-secondary: #4ade80;
+            --brand-dark-text-primary: #ffffff;
+            --brand-dark-text-secondary: #a3a3a3;
+            --brand-dark-background: #141414;
+            --brand-dark-surface: #262626;
+            --brand-dark-border: #404040;
+        }
+        .dark {
+            --brand-primary: var(--brand-dark-primary);
+            --brand-secondary: var(--brand-dark-secondary);
+            --brand-text-primary: var(--brand-dark-text-primary);
+            --brand-text-secondary: var(--brand-dark-text-secondary);
+            --brand-background: var(--brand-dark-background);
+            --brand-surface: var(--brand-dark-surface);
+            --brand-border: var(--brand-dark-border);
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-brand-background text-brand-text-primary">
+<div class="flex min-h-screen flex-col">
+<header class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-brand-border bg-brand-surface/80 px-4 py-3 backdrop-blur-sm sm:px-6 lg:px-8">
+<div class="flex items-center gap-4">
+<div class="text-brand-primary size-7">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path></svg>
+</div>
+<h1 class="text-xl font-bold tracking-tighter">BillSplit</h1>
+</div>
+<nav class="hidden items-center gap-6 text-sm font-medium lg:flex">
+<a class="text-brand-text-primary transition-colors hover:text-brand-secondary" href="#">Dashboard</a>
+<a class="text-brand-text-secondary transition-colors hover:text-brand-secondary" href="#">Friends</a>
+<a class="text-brand-text-secondary transition-colors hover:text-brand-secondary" href="#">Activity</a>
+<a class="text-brand-text-secondary transition-colors hover:text-brand-secondary" href="#">Groups</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-full p-2 text-brand-text-secondary transition-colors hover:bg-brand-border hover:text-brand-text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCP98NQjjmOtx-F99U-Cz42PpEfC9K63pN2SyYhFD-DFefpa3unzJhByufL8gy3WUgfBOH1BH1e6l9gPkAoCF-ji0vaq0SQV3fo1IOUTT2_MWqOtJTzpkm0xCAK7HbrcC7iPayMg_h9KtX4kmnk_1A950zT8CXx4dciKrQfTv3GBE4xTHgR8TaxN5MLvU3FYlbikdF2-KY5goBa7UvlbmBcH9ZbLLpxylPJVzmE6KGzueVbtyZFAmyGdA8f3wuGQuJ4qHlDpsea9wA");'></div>
+<span class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-green-500 ring-2 ring-white"></span>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="container mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
+<div class="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="Sarah Miller's profile picture" class="h-20 w-20 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRGk08mPgf7WATccMKtjNI9mgEkQ7Cmws262IQyDDh8eJg8QpI6ZBYbczTX4lwMFByCKaeh6dBckKONzL0CaxAwNVkiVbwBhxf3bud5fnUuhHxloHhbFwt6xoKjXpcQD8hwkIlQ1dXf3oKT5MNEMZYpARlzjKIA8OuG2QoYPZdcZHsQ4JbqHbTuyNtBR48Sw4Gx1lQ1XCLdR-YGyiUPMb85oPKtxxfCYS0c0uzm64iA6TJnlnKG7Mgh5C7MD4EWRyKHBid1tZJZVA"/>
+<span class="absolute bottom-1 right-1 block h-4 w-4 rounded-full bg-green-500 ring-2 ring-white"></span>
+</div>
+<div>
+<h2 class="text-3xl font-bold tracking-tight text-brand-text-primary">Sarah Miller</h2>
+<p class="text-brand-secondary flex items-center gap-1.5 font-semibold">
+<span class="material-symbols-outlined text-base">check_circle</span>
+                                You are settled up
+                            </p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="inline-flex items-center justify-center whitespace-nowrap rounded-lg bg-brand-primary px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-opacity-90 disabled:pointer-events-none disabled:opacity-50">
+<span class="material-symbols-outlined mr-2">add</span>
+                           Add a bill
+                       </button>
+<button class="inline-flex items-center justify-center whitespace-nowrap rounded-lg border border-brand-border bg-brand-surface px-4 py-2 text-sm font-bold text-brand-text-primary transition-colors hover:bg-brand-border disabled:pointer-events-none disabled:opacity-50">
+<span class="material-symbols-outlined mr-2">handshake</span>
+                           Settle up
+                       </button>
+</div>
+</div>
+<div class="rounded-xl border border-brand-border bg-brand-surface p-6 shadow-sm">
+<div class="mb-6 flex items-center justify-between">
+<h3 class="text-xl font-bold text-brand-text-primary">Transaction History</h3>
+<button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium text-brand-text-secondary transition-colors hover:text-brand-text-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+<span class="material-symbols-outlined mr-2">download</span>
+                            Export
+                        </button>
+</div>
+<div class="flow-root">
+<ul class="-mb-8">
+<li>
+<div class="relative pb-8">
+<span aria-hidden="true" class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-brand-border"></span>
+<div class="relative flex items-start space-x-4">
+<div>
+<div class="relative flex h-10 w-10 items-center justify-center rounded-full bg-brand-border">
+<span class="material-symbols-outlined text-brand-text-secondary">receipt_long</span>
+</div>
+</div>
+<div class="min-w-0 flex-1 pt-1.5">
+<p class="text-sm font-semibold text-brand-text-primary">Dinner at The Italian Place</p>
+<p class="text-sm text-brand-text-secondary">You paid <span class="font-medium text-brand-text-primary">$45.00</span></p>
+<p class="mt-1 text-xs text-brand-text-secondary">July 15, 2024</p>
+</div>
+<div class="flex-shrink-0 self-center text-right">
+<p class="text-sm font-medium text-green-600">You lent</p>
+<p class="text-lg font-bold text-green-600">$22.50</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="relative pb-8">
+<span aria-hidden="true" class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-brand-border"></span>
+<div class="relative flex items-start space-x-4">
+<div>
+<div class="relative flex h-10 w-10 items-center justify-center rounded-full bg-brand-border">
+<span class="material-symbols-outlined text-brand-text-secondary">theaters</span>
+</div>
+</div>
+<div class="min-w-0 flex-1 pt-1.5">
+<p class="text-sm font-semibold text-brand-text-primary">Movie Night</p>
+<p class="text-sm text-brand-text-secondary">Sarah paid <span class="font-medium text-brand-text-primary">$20.00</span></p>
+<p class="mt-1 text-xs text-brand-text-secondary">July 12, 2024</p>
+</div>
+<div class="flex-shrink-0 self-center text-right">
+<p class="text-sm font-medium text-red-600">You borrowed</p>
+<p class="text-lg font-bold text-red-600">$10.00</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="relative">
+<div class="relative flex items-start space-x-4">
+<div>
+<div class="relative flex h-10 w-10 items-center justify-center rounded-full bg-brand-border">
+<span class="material-symbols-outlined text-brand-text-secondary">beach_access</span>
+</div>
+</div>
+<div class="min-w-0 flex-1 pt-1.5">
+<p class="text-sm font-semibold text-brand-text-primary">Weekend Trip to the Coast</p>
+<p class="text-sm text-brand-text-secondary">You paid <span class="font-medium text-brand-text-primary">$150.00</span></p>
+<p class="mt-1 text-xs text-brand-text-secondary">July 5, 2024</p>
+</div>
+<div class="flex-shrink-0 self-center text-right">
+<p class="text-sm font-medium text-green-600">You lent</p>
+<p class="text-lg font-bold text-green-600">$75.00</p>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

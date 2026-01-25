@@ -1,0 +1,569 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-50: #f0f9ff;
+        --primary-100: #e0f2fe;
+        --primary-200: #bae6fd;
+        --primary-300: #7dd3fc;
+        --primary-400: #38bdf8;
+        --primary-500: #0ea5e9;
+        --primary-600: #0284c7;
+        --primary-700: #0369a1;
+        --primary-800: #075985;
+        --primary-900: #0c4a6e;
+        --primary-950: #082f49;
+        --accent-50: #faf5ff;
+        --accent-100: #f3e8ff;
+        --accent-200: #e9d5ff;
+        --accent-300: #d8b4fe;
+        --accent-400: #c084fc;
+        --accent-500: #a855f7;
+        --accent-600: #9333ea;
+        --accent-700: #7e22ce;
+        --accent-800: #6b21a8;
+        --accent-900: #581c87;
+        --accent-950: #3b0764;
+      }
+    </style>
+  </head>
+  <body class="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white">
+    <div
+      class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
+      style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm px-10 py-3"
+        >
+          <div class="flex items-center gap-3 text-neutral-900 dark:text-white">
+            <svg
+              class="w-8 h-8 text-primary-500"
+              fill="none"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <h2 class="text-xl font-bold tracking-tight">Splitr</h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-8">
+            <a
+              class="text-sm font-medium hover:text-primary-500 transition-colors"
+              href="#how-it-works"
+              >How it works</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary-500 transition-colors"
+              href="#features"
+              >Features</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary-500 transition-colors"
+              href="#security"
+              >Security</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary-500 transition-colors"
+              href="#testimonials"
+              >Testimonials</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary-500 transition-colors"
+              href="#faq"
+              >FAQ</a
+            >
+          </nav>
+          <div class="flex items-center gap-4">
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-white text-sm font-bold leading-normal tracking-[-0.015em] hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+            >
+              <span class="truncate">Try the demo</span>
+            </button>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary-500 text-white text-sm font-bold leading-normal tracking-[-0.015em] hover:bg-primary-600 transition-colors"
+            >
+              <span class="truncate">Sign up</span>
+            </button>
+          </div>
+        </header>
+        <main class="flex-1">
+          <section class="py-24 md:py-32 lg:py-40 text-center">
+            <div class="container px-4 md:px-6">
+              <div class="flex flex-col items-center gap-6">
+                <h1
+                  class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter"
+                >
+                  Split bills, not friendships.
+                </h1>
+                <p
+                  class="max-w-3xl mx-auto text-lg md:text-xl text-neutral-600 dark:text-neutral-400"
+                >
+                  Splitr makes it easy to share expenses with friends,
+                  roommates, and travel companions. Track balances, settle up,
+                  and keep everyone on the same page.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                  <button
+                    class="flex items-center justify-center rounded-full h-12 px-8 bg-primary-500 text-white text-base font-bold hover:bg-primary-600 transition-colors shadow-lg"
+                  >
+                    <span>Try the demo</span>
+                  </button>
+                  <button
+                    class="flex items-center justify-center rounded-full h-12 px-8 bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-white text-base font-bold hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors shadow-lg"
+                  >
+                    <span>Sign up</span>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="mt-16 md:mt-24 rounded-2xl overflow-hidden shadow-2xl"
+              >
+                <img
+                  alt="App screenshot showing a group of friends splitting a bill"
+                  class="w-full h-auto"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBU6LXYl5UG56XMhn7Tx9aEWiSdPF6upu0K1WoBL4XuyCMH612jXDa0YoOEzYUwbNDsLWh15vXdNnM5OpVlnx2ckzDA7LcPdNccT1EuUxi3c4mICMYEmVV713OsCL2a36nkHsJ-MC7BfEZ2ZuZYioBTMI8i8Elc5f9m1kl2aw4amauSM-6m4bNUOE9gkuIg3itLRcgJoi6iHcJLw25mXJg2ACJ2xb6aCjqJoUUxHaGoCpSEcRygxOhu1yhNQaC35Y6To180rwxQG0"
+                />
+              </div>
+            </div>
+          </section>
+          <section
+            class="py-24 md:py-32 bg-neutral-50 dark:bg-neutral-950"
+            id="how-it-works"
+          >
+            <div class="container px-4 md:px-6">
+              <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+                  How it works
+                </h2>
+                <p class="mt-4 text-lg text-neutral-600 dark:text-neutral-400">
+                  Three simple steps to split expenses.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="flex flex-col items-center text-center gap-4">
+                  <div
+                    class="flex items-center justify-center w-20 h-20 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-500 dark:text-primary-300"
+                  >
+                    <span class="material-symbols-outlined text-4xl"
+                      >receipt_long</span
+                    >
+                  </div>
+                  <h3 class="text-2xl font-bold">1. Scan receipts</h3>
+                  <p class="text-neutral-600 dark:text-neutral-400">
+                    Use our AI-powered scanner to automatically itemize and
+                    split expenses. No more manual entry!
+                  </p>
+                </div>
+                <div class="flex flex-col items-center text-center gap-4">
+                  <div
+                    class="flex items-center justify-center w-20 h-20 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-500 dark:text-primary-300"
+                  >
+                    <span class="material-symbols-outlined text-4xl"
+                      >group_add</span
+                    >
+                  </div>
+                  <h3 class="text-2xl font-bold">2. Add friends</h3>
+                  <p class="text-neutral-600 dark:text-neutral-400">
+                    Invite your friends to your group and easily assign who paid
+                    for what. Keep track of who owes whom.
+                  </p>
+                </div>
+                <div class="flex flex-col items-center text-center gap-4">
+                  <div
+                    class="flex items-center justify-center w-20 h-20 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-500 dark:text-primary-300"
+                  >
+                    <span class="material-symbols-outlined text-4xl">paid</span>
+                  </div>
+                  <h3 class="text-2xl font-bold">3. Settle up</h3>
+                  <p class="text-neutral-600 dark:text-neutral-400">
+                    Settle balances with a few taps. We support various payment
+                    methods for seamless transactions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="py-24 md:py-32" id="features">
+            <div class="container px-4 md:px-6">
+              <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+                  Key Features
+                </h2>
+                <p class="mt-4 text-lg text-neutral-600 dark:text-neutral-400">
+                  Designed for seamless bill splitting.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                  class="flex flex-col gap-4 p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-950 shadow-md"
+                >
+                  <img
+                    alt="AI Receipt Scanning"
+                    class="w-full h-48 object-cover rounded-lg"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqBLBARlDj4cCgrAb4zOaEp-EZTZKKMGIYMERrcVeA9qIxGUZ4vrypnVpE0Ykp2l07xXmAWalB2q8KZeXAyk7jp6Uw2zwjeIM9zDRvjq0DHNIY_cnOFCeBEOP4At1WwcTKoEgLRKustm_xWGkel94SSg4I-c3OGo21Bxkib7pEDE86QyxbXVdxCfWwDBCjmT7gGPUv8NjcaHfAxWkdCKoredcBYjo9Q1v8yHx3rYJRGy97ajS4QJa4GQZx6nFYcvOjGdL3L19g4VE"
+                  />
+                  <h3 class="text-xl font-bold">AI-Powered Receipt Scanning</h3>
+                  <p class="text-neutral-600 dark:text-neutral-400">
+                    Our intelligent receipt scanner automatically extracts items
+                    and amounts, making splitting bills a breeze.
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col gap-4 p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-950 shadow-md"
+                >
+                  <img
+                    alt="Social Feed for Expenses"
+                    class="w-full h-48 object-cover rounded-lg"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUNq1z8PS0Rry3oxw43gYaix4rRybdPGq5vaoYfoOef3PFzTYfs4QI6GfpdqiyK7RMeqV7ks81QIrA4CiMR5UbHkFDU0MRQqe-R1iYtoA3z1RYwaqLE1zSPQHetdMYWUxUS2qdxmvZKNP3WuTjQ2oc8R39Wcq7V9AlmUlMsgYq_vw-ulbZjAaIsK5GvzIRZQobg_K14pijJ7BLsYIss0MEAz8ZaiBH0rMW3g2C1he9roMVICZxFaB3WjC5nuWDxI0n8zX_32_uXq0"
+                  />
+                  <h3 class="text-xl font-bold">Social Feed for Expenses</h3>
+                  <p class="text-neutral-600 dark:text-neutral-400">
+                    Stay updated with a social feed that shows recent expenses,
+                    payments, and group activity.
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col gap-4 p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-950 shadow-md"
+                >
+                  <img
+                    alt="Easy Settlements"
+                    class="w-full h-48 object-cover rounded-lg"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuARahvmi0sWe2oZBEhXqKIajCcsEFfBR5ivbyqCHWTF0liyS7IbDrBCJ4q7oLKikOM3tbDnREgpVjWqeBFPALjzWfIdXkBi4_JCWBu1PSBd-y9ZrxJIncdfPOYSL1RxrqgBCpfSg-PYa1KQELlTFYrq75iP07dQQY4AnroHoXC7acyDVKZjSiISckQtO1pbXzACKIPFuAHv4V_4Okr8AzMB0nuuQ2EAq27Uvv93Kg0K6QAxT0gse_x9Leg9YjkQMXRYFLChaLb9Zis"
+                  />
+                  <h3 class="text-xl font-bold">Easy Settlements</h3>
+                  <p class="text-neutral-600 dark:text-neutral-400">
+                    Settle balances quickly and easily with integrated payment
+                    options. No more awkward cash exchanges.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="py-24 md:py-32 bg-neutral-50 dark:bg-neutral-950"
+            id="security"
+          >
+            <div class="container px-4 md:px-6">
+              <div class="max-w-3xl mx-auto text-center">
+                <div
+                  class="flex items-center justify-center w-20 h-20 mx-auto mb-6 rounded-full bg-accent-100 dark:bg-accent-900 text-accent-500 dark:text-accent-300"
+                >
+                  <span class="material-symbols-outlined text-4xl"
+                    >security</span
+                  >
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+                  Security You Can Trust
+                </h2>
+                <p class="mt-4 text-lg text-neutral-600 dark:text-neutral-400">
+                  Your financial data is protected with bank-level security. We
+                  use end-to-end encryption and secure servers to ensure your
+                  information is always safe.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class="py-24 md:py-32" id="testimonials">
+            <div class="container px-4 md:px-6">
+              <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+                  What our users are saying
+                </h2>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                  class="flex flex-col gap-4 p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-950 shadow-md"
+                >
+                  <img
+                    alt="Sarah, Student"
+                    class="w-20 h-20 rounded-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC24G5A0Jn8l5mnmcWxIFj9ZFOeI_xdIK1DgYbQylITfsvSoLeyxnkf3CVom4qfUM7CGSTgy80gTA-Z0-t5UkqftJ6fYFXkvMYlzTI9du6xVhC2SbL783Dln8ANcfyCnlHvfItz-zIy1VPJGN4njBiXVOMLgcvqN9wCpAqTdVppQIlqvQ9yQXdKr7gjjRFCsHAkK2zrY8b93OJCJ_RuaFjy_778CGOpXTg-61g1d9vJ4Zlam8pYc5pjx0a3DdIWXBpMn0JCwAG3pCY"
+                  />
+                  <blockquote
+                    class="text-lg italic text-neutral-600 dark:text-neutral-400"
+                  >
+                    "Splitr has been a lifesaver for managing expenses with my
+                    roommates. It's so easy to keep track of who owes what."
+                  </blockquote>
+                  <p class="font-bold">- Sarah, Student</p>
+                </div>
+                <div
+                  class="flex flex-col gap-4 p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-950 shadow-md"
+                >
+                  <img
+                    alt="Mark, Roommate"
+                    class="w-20 h-20 rounded-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4qwyKG2hVNiePPBeplcj9ozv4a1bvIFnQArUvxknplKmFztZ9Srqk47XfKNfxrakv0f-LQROcCJgw4ebOUTb7CxeLxbJnLPd6UtB0-RXf7Gpei3f1bSxB_QNChvyuMRsWvW-bL0sz-M0zsrLz4c0b5WXBLcLR82mXD8HNdlMwxg25wYqhcHw8RniqIxJI_vde9ucmBL3yzZvGZxqTAYBXuk3v3n0LDIqiM-_DgH4opwdyNjXi5ModHVQWot_rUuMKAt-_p4PWLyw"
+                  />
+                  <blockquote
+                    class="text-lg italic text-neutral-600 dark:text-neutral-400"
+                  >
+                    "I love the receipt scanning feature! It saves so much time
+                    and eliminates the hassle of manual entry."
+                  </blockquote>
+                  <p class="font-bold">- Mark, Roommate</p>
+                </div>
+                <div
+                  class="flex flex-col gap-4 p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-950 shadow-md"
+                >
+                  <img
+                    alt="Emily, Traveler"
+                    class="w-20 h-20 rounded-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKtEpvGT3NhyZ6Gja7fmkvXouC5bc_LjNdyDm34rdPHYPOJsVQvuiy57W9MEguoXvshCFa31N43BVYIKhTJRh8VgIg_1ITlxV6exA6k5QvYailMAdX4colXaOdWgTTwlnNi45rzQrvA7QGg_uY96MYvr04bVdrlOSzLxRsuXh21gkj8StMxXz1GJeky0Ty2nI5G1xUaQfKcUXyvHSUzA6iyqR8x2sAcGunGR38_mJibJ-FGG7-eVCsOO121cLQcRWUWAh6Sd5j_A0"
+                  />
+                  <blockquote
+                    class="text-lg italic text-neutral-600 dark:text-neutral-400"
+                  >
+                    "Splitr made splitting bills on our group trip a breeze. No
+                    more complicated spreadsheets or IOUs!"
+                  </blockquote>
+                  <p class="font-bold">- Emily, Traveler</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="py-24 md:py-32 bg-neutral-50 dark:bg-neutral-950"
+            id="faq"
+          >
+            <div class="container px-4 md:px-6">
+              <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+                  Frequently Asked Questions
+                </h2>
+              </div>
+              <div class="max-w-3xl mx-auto flex flex-col gap-4">
+                <details
+                  class="group p-4 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 transition-all duration-300"
+                  open=""
+                >
+                  <summary
+                    class="flex items-center justify-between cursor-pointer list-none"
+                  >
+                    <span class="font-semibold">How does Splitr work?</span>
+                    <span
+                      class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
+                      >expand_more</span
+                    >
+                  </summary>
+                  <p class="mt-4 text-neutral-600 dark:text-neutral-400">
+                    Splitr allows you to easily split expenses with friends,
+                    roommates, or travel companions. Simply scan your receipts,
+                    add your friends to a group, and assign who paid for what.
+                    The app automatically calculates balances and allows for
+                    easy settlements.
+                  </p>
+                </details>
+                <details
+                  class="group p-4 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 transition-all duration-300"
+                >
+                  <summary
+                    class="flex items-center justify-between cursor-pointer list-none"
+                  >
+                    <span class="font-semibold">Is my data secure?</span>
+                    <span
+                      class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
+                      >expand_more</span
+                    >
+                  </summary>
+                  <p class="mt-4 text-neutral-600 dark:text-neutral-400">
+                    Yes, your data is secure. We use bank-level encryption and
+                    follow industry best practices to protect your information.
+                  </p>
+                </details>
+                <details
+                  class="group p-4 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 transition-all duration-300"
+                >
+                  <summary
+                    class="flex items-center justify-between cursor-pointer list-none"
+                  >
+                    <span class="font-semibold"
+                      >What payment methods do you support?</span
+                    >
+                    <span
+                      class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
+                      >expand_more</span
+                    >
+                  </summary>
+                  <p class="mt-4 text-neutral-600 dark:text-neutral-400">
+                    We support a variety of payment methods, including
+                    credit/debit cards, bank transfers, and popular digital
+                    wallets to make settling up as convenient as possible.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </section>
+          <section class="py-24 md:py-32">
+            <div class="container px-4 md:px-6">
+              <div
+                class="max-w-3xl mx-auto text-center p-8 md:p-12 rounded-2xl bg-primary-500 text-white shadow-xl"
+              >
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+                  Ready to simplify your shared expenses?
+                </h2>
+                <p class="mt-4 text-lg text-primary-100">
+                  Join thousands of users who are splitting bills the smart way.
+                </p>
+                <button
+                  class="mt-8 flex items-center justify-center rounded-full h-12 px-8 bg-white text-primary-500 text-base font-bold hover:bg-primary-100 transition-colors shadow-lg mx-auto"
+                >
+                  <span>Sign up for free</span>
+                </button>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="border-t border-neutral-200 dark:border-neutral-800">
+          <div class="container px-4 md:px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div class="flex flex-col gap-4">
+                <div class="flex items-center gap-3">
+                  <svg
+                    class="w-8 h-8 text-primary-500"
+                    fill="none"
+                    viewBox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                  <h3 class="text-xl font-bold">Splitr</h3>
+                </div>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                  © 2024 Splitr. All rights reserved.
+                </p>
+              </div>
+              <div class="flex flex-col gap-2">
+                <h4 class="font-semibold">Company</h4>
+                <a
+                  class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500"
+                  href="#"
+                  >About</a
+                >
+                <a
+                  class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500"
+                  href="#"
+                  >Careers</a
+                >
+                <a
+                  class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500"
+                  href="#"
+                  >Press</a
+                >
+              </div>
+              <div class="flex flex-col gap-2">
+                <h4 class="font-semibold">Legal</h4>
+                <a
+                  class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500"
+                  href="#"
+                  >Terms of Service</a
+                >
+                <a
+                  class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500"
+                  href="#"
+                  >Privacy Policy</a
+                >
+              </div>
+              <div class="flex flex-col gap-2">
+                <h4 class="font-semibold">Follow Us</h4>
+                <div class="flex gap-4">
+                  <a
+                    class="text-neutral-600 dark:text-neutral-400 hover:text-primary-500"
+                    href="#"
+                  >
+                    <svg
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M22 4s-.7 2.1-2 3.4c1.6 1.4 3.3 4.4 3.3 4.4s-1.4 1.4-3.3 1.4c0 0-1.4 2.8-4.4 2.8s-5.8-2.8-5.8-2.8c0 0 .7 1.4 2.8 1.4c2.1 0 3.3-1.4 3.3-1.4s-1.4-1.4-2.8-1.4c-2.8 0-5.8-2.8-5.8-5.8s2.8-5.8 5.8-5.8c2.8 0 4.4 2.8 4.4 2.8s-.7-1.4-2.8-1.4c-2.1 0-4.4 1.4-4.4 1.4s1.4-2.1 2.8-2.1c2.1 0 2.8 2.1 2.8 2.1z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    class="text-neutral-600 dark:text-neutral-400 hover:text-primary-500"
+                    href="#"
+                  >
+                    <svg
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        height="20"
+                        rx="5"
+                        ry="5"
+                        width="20"
+                        x="2"
+                        y="2"
+                      ></rect>
+                      <path
+                        d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                      ></path>
+                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                    </svg>
+                  </a>
+                  <a
+                    class="text-neutral-600 dark:text-neutral-400 hover:text-primary-500"
+                    href="#"
+                  >
+                    <svg
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B600%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #1173d4;
+        --border-color: #e2e8f0;
+      }
+      .dark {
+        --background-color: #0d141b;
+        --text-color: #f8fafc;
+        --border-color: #334155;
+        --input-bg: #1e293b;
+        --muted-text: #94a3b8;
+        --card-bg: #1e293b;
+      }
+      .light {
+        --background-color: #f8fafc;
+        --text-color: #0d141b;
+        --border-color: #e2e8f0;
+        --input-bg: #ffffff;
+        --muted-text: #64748b;
+        --card-bg: #ffffff;
+      }
+    </style>
+</head>
+<body class="light">
+<div class="relative flex size-full min-h-screen flex-col bg-[var(--background-color)] text-[var(--text-color)] group/design-root overflow-x-hidden" style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(100, 116, 139)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M215.39,92.61a8,8,0,0,0-11.38,0L128,168.63,52,92.61a8,8,0,0,0-11.38,11.38l80,80a8,8,0,0,0,11.38,0l80-80A8,8,0,0,0,215.39,92.61Z%27%3e%3c/path%3e%3c/svg%3e'); font-family: Inter, &quot;Noto Sans&quot;, sans-serif;">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-color)] px-10 py-4 shadow-sm">
+<div class="flex items-center gap-3 text-2xl font-bold">
+<svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+<h1 class="tracking-tighter">BillSplit</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-[var(--muted-text)] hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined"> help </span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC3QQCY1V36nJQCIZ-LuGhOOksx3jNd-shBpYVnf6QxhHJhg464XR7o_FyXbpQz5SuHGr66NJBjRuCPaeFQY_nCIFWDBiJwBy5FfPE5bEg39O5pameXSqJyEa7nihA2kDqjv4RHQx4jBNSBjVe0zjNjVqHacS9UhtqT5PMGIzhUaaeRurgvNHO3sHmdCDqOMd9BQGpJJRv8-_ZsEVBpzIPeHLvf_rbDXcD_3M4EKNA4ZsS0pVrOkLHTQfGoew7JEPqkuOh76PL2H-8");'></div>
+<div class="flex items-center gap-2">
+<button class="rounded-full p-2 hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-[var(--muted-text)]"> dark_mode </span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-10 lg:px-10">
+<div class="w-full max-w-2xl space-y-8">
+<div class="px-6">
+<h2 class="text-3xl font-bold tracking-tight">Create a Bill</h2>
+<p class="text-[var(--muted-text)] mt-1">Fill out the details below to create a new bill.</p>
+</div>
+<form class="space-y-6 px-6">
+<div class="space-y-2">
+<label class="text-sm font-medium leading-none" for="title">Title</label>
+<input class="form-input flex w-full rounded-md border border-[var(--border-color)] bg-[var(--input-bg)] px-3 py-2 text-sm placeholder:text-[var(--muted-text)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2 focus:ring-offset-[var(--background-color)]" id="title" placeholder="e.g., Dinner at The Bistro"/>
+</div>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+<div class="space-y-2">
+<label class="text-sm font-medium leading-none" for="date">Date</label>
+<input class="form-input flex w-full rounded-md border border-[var(--border-color)] bg-[var(--input-bg)] px-3 py-2 text-sm placeholder:text-[var(--muted-text)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2 focus:ring-offset-[var(--background-color)]" id="date" type="date"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium leading-none" for="payer">Payer</label>
+<select class="form-select flex w-full rounded-md border border-[var(--border-color)] bg-[var(--input-bg)] px-3 py-2 text-sm bg-[image:--select-button-svg] bg-[center_right_0.5rem] bg-no-repeat appearance-none focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2 focus:ring-offset-[var(--background-color)]" id="payer">
+<option>Select a payer</option>
+<option>You</option>
+<option>Sarah</option>
+<option>Mark</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+<div class="space-y-2">
+<label class="text-sm font-medium leading-none" for="total">Total Amount</label>
+<div class="relative">
+<span class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-[var(--muted-text)]">$</span>
+<input class="form-input flex w-full rounded-md border border-[var(--border-color)] bg-[var(--input-bg)] py-2 pl-7 pr-3 text-sm placeholder:text-[var(--muted-text)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2 focus:ring-offset-[var(--background-color)]" id="total" placeholder="0.00"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium leading-none" for="category">Category</label>
+<select class="form-select flex w-full rounded-md border border-[var(--border-color)] bg-[var(--input-bg)] px-3 py-2 text-sm bg-[image:--select-button-svg] bg-[center_right_0.5rem] bg-no-repeat appearance-none focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2 focus:ring-offset-[var(--background-color)]" id="category">
+<option>Food &amp; Drink</option>
+<option>Groceries</option>
+<option>Housing</option>
+<option>Transport</option>
+<option>Entertainment</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium leading-none" for="notes">Notes</label>
+<textarea class="form-textarea flex w-full min-h-24 rounded-md border border-[var(--border-color)] bg-[var(--input-bg)] px-3 py-2 text-sm placeholder:text-[var(--muted-text)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2 focus:ring-offset-[var(--background-color)]" id="notes" placeholder="Optional notes about the bill"></textarea>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium leading-none" for="receipt">Receipt</label>
+<div class="flex items-center justify-center rounded-md border-2 border-dashed border-[var(--border-color)] bg-[var(--input-bg)] px-6 py-10">
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-[var(--muted-text)]"> upload_file </span>
+<p class="mt-2 text-sm text-[var(--muted-text)]">
+<span class="font-semibold text-[var(--primary-color)]">Click to upload</span> or drag and drop
+                    </p>
+<p class="text-xs text-[var(--muted-text)]">PNG, JPG, PDF up to 10MB</p>
+</div>
+</div>
+</div>
+<div class="space-y-4 rounded-lg border border-[var(--border-color)] bg-[var(--card-bg)] p-6 shadow-sm">
+<h3 class="text-lg font-semibold">Participants</h3>
+<div class="flex flex-wrap gap-2">
+<div class="flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+                    Sarah <button class="text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200">×</button>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+                    Mark <button class="text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200">×</button>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+                    Emily <button class="text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200">×</button>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+                    David <button class="text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200">×</button>
+</div>
+<button class="flex items-center gap-1 rounded-full border border-dashed border-[var(--border-color)] px-3 py-1 text-sm font-medium text-[var(--muted-text)] hover:border-solid hover:border-[var(--primary-color)] hover:text-[var(--primary-color)]">
+<span class="material-symbols-outlined text-base"> add </span>
+                    Add
+                  </button>
+</div>
+</div>
+<div class="space-y-4 rounded-lg border border-[var(--border-color)] bg-[var(--card-bg)] p-6 shadow-sm">
+<h3 class="text-lg font-semibold">Split Mode</h3>
+<div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+<label class="flex cursor-pointer flex-col items-center justify-center rounded-md border border-[var(--border-color)] p-4 text-center ring-offset-[var(--background-color)] has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-blue-50 has-[:checked]:ring-2 has-[:checked]:ring-[var(--primary-color)] has-[:checked]:ring-offset-2 dark:has-[:checked]:bg-blue-900/20">
+<span class="material-symbols-outlined text-3xl">scale</span>
+<span class="mt-2 text-sm font-medium">Equal</span>
+<input checked="" class="sr-only" name="split-mode" type="radio"/>
+</label>
+<label class="flex cursor-pointer flex-col items-center justify-center rounded-md border border-[var(--border-color)] p-4 text-center ring-offset-[var(--background-color)] has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-blue-50 has-[:checked]:ring-2 has-[:checked]:ring-[var(--primary-color)] has-[:checked]:ring-offset-2 dark:has-[:checked]:bg-blue-900/20">
+<span class="material-symbols-outlined text-3xl">edit_note</span>
+<span class="mt-2 text-sm font-medium">Custom</span>
+<input class="sr-only" name="split-mode" type="radio"/>
+</label>
+<label class="flex cursor-pointer flex-col items-center justify-center rounded-md border border-[var(--border-color)] p-4 text-center ring-offset-[var(--background-color)] has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-blue-50 has-[:checked]:ring-2 has-[:checked]:ring-[var(--primary-color)] has-[:checked]:ring-offset-2 dark:has-[:checked]:bg-blue-900/20">
+<span class="material-symbols-outlined text-3xl">percent</span>
+<span class="mt-2 text-sm font-medium">Percent</span>
+<input class="sr-only" name="split-mode" type="radio"/>
+</label>
+<label class="flex cursor-pointer flex-col items-center justify-center rounded-md border border-[var(--border-color)] p-4 text-center ring-offset-[var(--background-color)] has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-blue-50 has-[:checked]:ring-2 has-[:checked]:ring-[var(--primary-color)] has-[:checked]:ring-offset-2 dark:has-[:checked]:bg-blue-900/20">
+<span class="material-symbols-outlined text-3xl">pie_chart</span>
+<span class="mt-2 text-sm font-medium">Shares</span>
+<input class="sr-only" name="split-mode" type="radio"/>
+</label>
+</div>
+</div>
+<div class="space-y-4">
+<button class="flex w-full items-center justify-center gap-2 rounded-md border border-dashed border-[var(--border-color)] py-3 text-sm font-medium text-[var(--muted-text)] hover:border-solid hover:border-[var(--primary-color)] hover:text-[var(--primary-color)]" type="button">
+<span class="material-symbols-outlined text-lg"> add </span> Add Line Items (Optional)
+                </button>
+</div>
+<div class="space-y-4 rounded-lg border border-[var(--border-color)] bg-[var(--card-bg)] p-6 shadow-sm">
+<h3 class="text-lg font-semibold">Summary</h3>
+<div class="space-y-3">
+<div class="flex justify-between border-b border-[var(--border-color)] py-2">
+<p class="text-[var(--muted-text)]">Sarah</p>
+<p class="font-medium">$25.00</p>
+</div>
+<div class="flex justify-between border-b border-[var(--border-color)] py-2">
+<p class="text-[var(--muted-text)]">Mark</p>
+<p class="font-medium">$25.00</p>
+</div>
+<div class="flex justify-between border-b border-[var(--border-color)] py-2">
+<p class="text-[var(--muted-text)]">Emily</p>
+<p class="font-medium">$25.00</p>
+</div>
+<div class="flex justify-between py-2">
+<p class="text-[var(--muted-text)]">David</p>
+<p class="font-medium">$25.00</p>
+</div>
+<div class="flex justify-between border-t border-[var(--border-color)] pt-3 font-semibold">
+<p>Total</p>
+<p>$100.00</p>
+</div>
+</div>
+<button class="flex w-full items-center justify-center gap-2 rounded-md border border-dashed border-[var(--border-color)] py-2 mt-4 text-sm font-medium text-[var(--muted-text)] hover:border-solid hover:border-[var(--primary-color)] hover:text-[var(--primary-color)]" type="button">
+<span class="material-symbols-outlined text-base"> add </span> Add Fees / Rounding
+                </button>
+</div>
+<div class="flex justify-end gap-4 pt-4">
+<button class="inline-flex h-11 items-center justify-center rounded-md bg-slate-100 px-6 text-sm font-semibold text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700" type="button">
+                  Cancel
+                </button>
+<button class="inline-flex h-11 items-center justify-center rounded-md bg-[var(--primary-color)] px-6 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background-color)]" type="submit">
+                  Save Bill
+                </button>
+</div>
+</form>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

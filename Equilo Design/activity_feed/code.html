@@ -1,0 +1,160 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Splitr - Activity Feed</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #137fec;
+        --background-light: #f8fafc;
+        --background-dark: #0f172a;
+        --text-light-primary: #0f172a;
+        --text-light-secondary: #64748b;
+        --text-dark-primary: #f8fafc;
+        --text-dark-secondary: #94a3b8;
+        --border-light: #e2e8f0;
+        --border-dark: #334155;
+        --surface-light: #ffffff;
+        --surface-dark: #1e293b;
+      }
+      .dark {
+        --background-light: var(--background-dark);
+        --text-light-primary: var(--text-dark-primary);
+        --text-light-secondary: var(--text-dark-secondary);
+        --border-light: var(--border-dark);
+        --surface-light: var(--surface-dark);
+      }
+    </style>
+</head>
+<body class="bg-[var(--background-light)] text-[var(--text-light-primary)]" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+<div class="flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-light)] px-4 sm:px-6 lg:px-10 py-4 shadow-sm">
+<div class="flex items-center gap-3 text-2xl font-bold">
+<svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+<h1 class="tracking-tight">Splitr</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-[var(--text-light-secondary)] hover:text-[var(--text-light-primary)] transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-bold text-[var(--primary-color)]" href="#">Activity</a>
+<a class="text-sm font-medium text-[var(--text-light-secondary)] hover:text-[var(--text-light-primary)] transition-colors" href="#">Bills</a>
+<a class="text-sm font-medium text-[var(--text-light-secondary)] hover:text-[var(--text-light-primary)] transition-colors" href="#">Friends</a>
+<a class="text-sm font-medium text-[var(--text-light-secondary)] hover:text-[var(--text-light-primary)] transition-colors" href="#">Groups</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-transparent hover:bg-[var(--border-light)] transition-colors">
+<span class="material-symbols-outlined text-[var(--text-light-secondary)]">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGHVJtwcdz-Q0lJ4yWgJS_hXxnuHVy8D2RKx6P763t3IEfF2CFNJJXUcG-InStd5801HAxp77nBvVaTomOIQz-_RsPtcvBAclUDKFojhb-DINsSaFXptsLNq_d0BWrgvXB4IsVPzPlN-6I4qdTy7_F8pANxuib1wATwhzQUwjElQL4pQj_Iicp8dPQ7H7Jl2M7lgZzeZfjCZJzhB2_HbyVKkPIs44Xjf392QWHDQdgG9uNxPWUEmbXzKiSJOw6ED6hWiHcrv1cLwg");'></div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-8 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-4xl">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
+<h2 class="text-4xl font-bold tracking-tighter">Activity</h2>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-[var(--primary-color)] text-white text-sm font-medium shadow-sm hover:bg-opacity-90 transition-all">
+<span class="material-symbols-outlined">add</span>
+<span class="truncate">New Bill</span>
+</button>
+</div>
+<div class="flex gap-2 mb-8 flex-wrap">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-lg bg-[var(--surface-light)] border border-[var(--border-light)] px-3 shadow-sm">
+<p class="text-[var(--text-light-primary)] text-sm font-medium">All</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-lg bg-transparent px-3">
+<p class="text-[var(--text-light-secondary)] text-sm font-medium">Friends</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-lg bg-transparent px-3">
+<p class="text-[var(--text-light-secondary)] text-sm font-medium">Groups</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-lg bg-transparent px-3">
+<p class="text-[var(--text-light-secondary)] text-sm font-medium">Mine</p>
+</button>
+</div>
+<div class="space-y-2">
+<div class="grid grid-cols-[auto_1fr] items-start gap-4 p-4 rounded-lg bg-[var(--surface-light)] shadow-sm border border-transparent hover:border-[var(--border-light)] transition-all">
+<div class="flex flex-col items-center gap-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAsNV9oxUeX_siPUURqnBk46J04PgiMOAhJ9oswJkfqwJ7isv1mw-5I-FjZtyLGCXBIrTLSDwFY0lkpHIIL9ccz0KadcwyfXHpV0RQ8hNVgftCbIGDYg2RdXnfxN8bblj2I9g9PMq4SnX1pkEg082igSi5qjIpAP6kjTm102WeZSPbfChjhh07kia2wXQBY0j_zaqsecqZjtHrjR7N9VV-zNhYjCkD4-cvrEA_M_Sxq-OwtWd_L3XcdgkMp4Ywx6zuprPpfmOc8xn0");'></div>
+</div>
+<div class="flex flex-col">
+<p class="font-medium">
+<span class="font-bold">Sophia</span> added a new bill:
+                    <span class="font-bold text-[var(--primary-color)]">Weekend Getaway</span>
+</p>
+<p class="text-sm text-[var(--text-light-secondary)]">2 hours ago</p>
+<div class="mt-2 text-sm text-[var(--text-light-secondary)] bg-slate-100 dark:bg-slate-800 p-3 rounded-lg">
+                    "Don't forget to add the gas money! 🚗💨"
+                  </div>
+</div>
+</div>
+<div class="grid grid-cols-[auto_1fr] items-start gap-4 p-4 rounded-lg bg-[var(--surface-light)] shadow-sm border border-transparent hover:border-[var(--border-light)] transition-all">
+<div class="flex flex-col items-center gap-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcIbJZY5dLvZgrXOdIV5ErSC15R5VTFtQAfYpMkIxRk4-mivY2Fx9M4Pm5w-tLjcsRos6h_cueWVMMG_KBYMCDoqXHCLZIFWYGvpcDjYHyofrV8T8mJHlfo8E8LYZnACnL91Fybp9lg5DfNZT-QofcZ7aNPyfnraey3xoV1XSRSt-i-SifNcNuNoS02-cKAhTSu1NwkMBSFawmWZzM2GmrQig5ivl1bjloK5DNlnOCBVmZ4cppfAY-GUaW1sU8f3K6-h6qT0SCYxk");'></div>
+</div>
+<div class="flex flex-col">
+<p class="font-medium">
+<span class="font-bold">Liam</span> updated the split for
+                    <span class="font-bold text-[var(--primary-color)]">Weekend Getaway</span>
+</p>
+<p class="text-sm text-[var(--text-light-secondary)]">1 hour ago</p>
+</div>
+</div>
+<div class="grid grid-cols-[auto_1fr] items-start gap-4 p-4 rounded-lg bg-[var(--surface-light)] shadow-sm border border-transparent hover:border-[var(--border-light)] transition-all">
+<div class="flex flex-col items-center gap-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAdQ9iRs2CRhcVfR62VUnkHq2xI7KbgvW-MK-x-L-ib6B_HbH67knNQbkDpLO4h3O1z-YBfVFeWSup5Wr_8mUAnwAGdoXF-QRXSalHHxEmdUIfdVbusKXtNgVlmAaYmUgnUTLvrJQnxeoMLIZz_MoELhECvoqPsHuokq-FYO02Qoy_4PZ_ivgXnzo5sCq6bO5KbNf-GJfX9SYm1EwU8sry2243yNpPlFcZHIDzgm9FAuGoh8Yv7kRikSeloTi9QAt7iA_a__h5pah4");'></div>
+</div>
+<div class="flex flex-col">
+<p class="font-medium">
+<span class="font-bold">You</span> settled
+                    <span class="font-bold text-[var(--primary-color)]">Weekend Getaway</span> with
+                    <span class="font-bold">Sophia</span>
+</p>
+<p class="text-sm text-[var(--text-light-secondary)]">30 minutes ago</p>
+</div>
+</div>
+<div class="grid grid-cols-[auto_1fr] items-start gap-4 p-4 rounded-lg bg-[var(--surface-light)] shadow-sm border border-transparent hover:border-[var(--border-light)] transition-all">
+<div class="flex flex-col items-center gap-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdWVdBcoLiB0n4fhKxNtPI6js9v5qYUzQfJ6HZJ0XgEeif2L2OVE6SN550dQ2uQ5nOKl3hCWvn_jj1OEY3-ALCjxa7fcYKB3xtBwpJj5ArEHeFSRhcFgfd1SqQk00pzQ9Vg-CeuhrvS-rdvNd1EC1sUVHZq5p1tNARUt3beX6VAng1mFhhUcwaB7Mwo4FxOmaBNh9Vyx42emk9hsPCzpDsWEz8EyAG5Bf5ZUAF8k7sSzad-ZTT1Jy7PRnzn0kbWuPeoDMe5_sO5D0");'></div>
+</div>
+<div class="flex flex-col">
+<p class="font-medium">
+<span class="font-bold">Ethan</span> added a new bill:
+                    <span class="font-bold text-[var(--primary-color)]">Monthly Rent</span>
+</p>
+<p class="text-sm text-[var(--text-light-secondary)]">Yesterday</p>
+</div>
+</div>
+<div class="grid grid-cols-[auto_1fr] items-start gap-4 p-4 rounded-lg bg-[var(--surface-light)] shadow-sm border border-transparent hover:border-[var(--border-light)] transition-all">
+<div class="flex flex-col items-center gap-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNfRnf1VhvGI44UPkTCRHDA3XM1tFThW6lMuAlxMAOlTeTF60YSQIiN2guG11xE_tfA8Zbiq9-j5leoidbjaWyNirXsTboRH92sI5V5qCzTj3-orH_X1wU0BTR0RWR723cDYBHtIZ0313TwX31Qs_aSt1CLAqd-Mg4HdkODahbKkwFR3NAcO3F2JBFmohP7J7H0xL_srMu0OLXT5Mn-V1ehNu15ZFd8-m_wGcwwE-b5o-lX1i0Py3pshihQGW3l6SlKfqAWGzt-rw");'></div>
+</div>
+<div class="flex flex-col">
+<p class="font-medium">
+<span class="font-bold">You</span> updated the split for
+                    <span class="font-bold text-[var(--primary-color)]">Monthly Rent</span>
+</p>
+<p class="text-sm text-[var(--text-light-secondary)]">Yesterday</p>
+<div class="flex items-center gap-2 mt-2">
+<button class="flex items-center gap-1 rounded-full bg-slate-100 dark:bg-slate-700 px-2 py-0.5 text-sm">
+<span>👍</span>
+<span class="font-medium">2</span>
+</button>
+<button class="flex items-center gap-1 rounded-full bg-slate-100 dark:bg-slate-700 px-2 py-0.5 text-sm">
+<span>😂</span>
+<span class="font-medium">1</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

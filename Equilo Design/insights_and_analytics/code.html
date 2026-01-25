@@ -1,0 +1,180 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>BillSplit - Insights</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<meta charset="utf-8"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+      :root {
+        --brand-primary: #137fec;
+        --brand-secondary: #eef5ff;
+        --light-bg: #f8f9fa;
+        --light-text: #0d141b;
+        --light-text-secondary: #6c757d;
+        --light-border: #e9ecef;
+        --dark-bg: #121212;
+        --dark-text: #ffffff;
+        --dark-text-secondary: #adb5bd;
+        --dark-border: #343a40;
+      }
+      .dark {
+        --bg-color: var(--dark-bg);
+        --text-color: var(--dark-text);
+        --text-secondary-color: var(--dark-text-secondary);
+        --border-color: var(--dark-border);
+        --surface-color: #1e1e1e;
+      }
+      .light {
+        --bg-color: var(--light-bg);
+        --text-color: var(--light-text);
+        --text-secondary-color: var(--light-text-secondary);
+        --border-color: var(--light-border);
+        --surface-color: #ffffff;
+      }
+      .chart-bar {
+        background-color: var(--brand-primary);
+        border-radius: 4px;
+      }
+    </style>
+</head>
+<body class="light">
+<div class="relative flex size-full min-h-screen flex-col bg-[var(--bg-color)] group/design-root overflow-x-hidden text-[var(--text-color)]" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-color)] px-10 py-4 shadow-sm">
+<div class="flex items-center gap-4 text-[var(--text-color)]">
+<div class="size-8 text-[var(--brand-primary)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tighter">BillSplit</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+<a class="text-[var(--text-secondary-color)] hover:text-[var(--text-color)] transition-colors" href="#">Dashboard</a>
+<a class="text-[var(--text-secondary-color)] hover:text-[var(--text-color)] transition-colors" href="#">Groups</a>
+<a class="text-[var(--text-secondary-color)] hover:text-[var(--text-color)] transition-colors" href="#">Friends</a>
+<a class="text-[var(--text-secondary-color)] hover:text-[var(--text-color)] transition-colors" href="#">Activity</a>
+<a class="text-[var(--text-color)] font-semibold" href="#">Insights</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-full size-10 bg-transparent hover:bg-[var(--surface-color)] text-[var(--text-secondary-color)] hover:text-[var(--text-color)] transition-colors">
+<span class="material-symbols-outlined"> notifications </span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--brand-primary)]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcDyuZtbe-8XVPhWfuaZFFaCv9P6vnbhX-bE4o9Jc_bOSGo48QlSSyey_GTy0RNopZEN3ky0i9-YJ7xW1poGP-mfJdMZOAnETeW_RekZHrBVwNpYub5o2c9y-IiPOxQLFBNgDvcIF1tpa_rD4EDgUuWBwhjiT71bdppFGnMBACu9zJNeMvdBj2qTr2wmH3yeJvwzzY7qz0HI24-Lcgh3Fx1WJbaMOjeVqw6EJMZHpdlNZ3ZLNJgHzdyyzQrxymGBjdUvrS8MZ5yuk");'></div>
+</div>
+</header>
+<main class="flex-1 px-4 sm:px-6 lg:px-10 py-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start gap-4 mb-8">
+<div class="flex flex-col gap-1">
+<h1 class="text-3xl font-bold tracking-tight">Insights</h1>
+<p class="text-[var(--text-secondary-color)]">Explore your spending patterns and trends.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center justify-center gap-2 rounded-md h-10 px-4 bg-white text-sm font-semibold text-slate-700 border border-slate-300 shadow-sm hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-base"> download </span>
+<span>Export CSV</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-md h-10 px-4 bg-white text-sm font-semibold text-slate-700 border border-slate-300 shadow-sm hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-base"> picture_as_pdf </span>
+<span>Export PDF</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-[var(--surface-color)] p-6 rounded-xl shadow-sm border border-[var(--border-color)]">
+<h3 class="text-lg font-semibold mb-4">Spending by Category</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<p class="w-28 text-sm text-[var(--text-secondary-color)]">Food</p>
+<div class="h-2 flex-1 bg-[var(--border-color)] rounded-full"><div class="chart-bar h-full" style="width: 35%;"></div></div>
+</div>
+<div class="flex items-center gap-4">
+<p class="w-28 text-sm text-[var(--text-secondary-color)]">Rent</p>
+<div class="h-2 flex-1 bg-[var(--border-color)] rounded-full"><div class="chart-bar h-full" style="width: 85%;"></div></div>
+</div>
+<div class="flex items-center gap-4">
+<p class="w-28 text-sm text-[var(--text-secondary-color)]">Utilities</p>
+<div class="h-2 flex-1 bg-[var(--border-color)] rounded-full"><div class="chart-bar h-full" style="width: 50%;"></div></div>
+</div>
+<div class="flex items-center gap-4">
+<p class="w-28 text-sm text-[var(--text-secondary-color)]">Entertainment</p>
+<div class="h-2 flex-1 bg-[var(--border-color)] rounded-full"><div class="chart-bar h-full" style="width: 60%;"></div></div>
+</div>
+<div class="flex items-center gap-4">
+<p class="w-28 text-sm text-[var(--text-secondary-color)]">Travel</p>
+<div class="h-2 flex-1 bg-[var(--border-color)] rounded-full"><div class="chart-bar h-full" style="width: 20%;"></div></div>
+</div>
+</div>
+</div>
+<div class="bg-[var(--surface-color)] p-6 rounded-xl shadow-sm border border-[var(--border-color)]">
+<h3 class="text-lg font-semibold mb-4">Spending by Group</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<p class="w-28 text-sm text-[var(--text-secondary-color)]">Roommates</p>
+<div class="h-2 flex-1 bg-[var(--border-color)] rounded-full"><div class="chart-bar h-full" style="width: 60%;"></div></div>
+</div>
+<div class="flex items-center gap-4">
+<p class="w-28 text-sm text-[var(--text-secondary-color)]">Trip to Tahoe</p>
+<div class="h-2 flex-1 bg-[var(--border-color)] rounded-full"><div class="chart-bar h-full" style="width: 90%;"></div></div>
+</div>
+<div class="flex items-center gap-4">
+<p class="w-28 text-sm text-[var(--text-secondary-color)]">Weekend Getaway</p>
+<div class="h-2 flex-1 bg-[var(--border-color)] rounded-full"><div class="chart-bar h-full" style="width: 20%;"></div></div>
+</div>
+<div class="flex items-center gap-4">
+<p class="w-28 text-sm text-[var(--text-secondary-color)]">Friends</p>
+<div class="h-2 flex-1 bg-[var(--border-color)] rounded-full"><div class="chart-bar h-full" style="width: 70%;"></div></div>
+</div>
+</div>
+</div>
+<div class="bg-[var(--surface-color)] p-6 rounded-xl shadow-sm border border-[var(--border-color)]">
+<h3 class="text-lg font-semibold mb-4">Spending by Friend</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<p class="w-28 text-sm text-[var(--text-secondary-color)]">Sarah</p>
+<div class="h-2 flex-1 bg-[var(--border-color)] rounded-full"><div class="chart-bar h-full" style="width: 70%;"></div></div>
+</div>
+<div class="flex items-center gap-4">
+<p class="w-28 text-sm text-[var(--text-secondary-color)]">David</p>
+<div class="h-2 flex-1 bg-[var(--border-color)] rounded-full"><div class="chart-bar h-full" style="width: 10%;"></div></div>
+</div>
+<div class="flex items-center gap-4">
+<p class="w-28 text-sm text-[var(--text-secondary-color)]">Emily</p>
+<div class="h-2 flex-1 bg-[var(--border-color)] rounded-full"><div class="chart-bar h-full" style="width: 40%;"></div></div>
+</div>
+<div class="flex items-center gap-4">
+<p class="w-28 text-sm text-[var(--text-secondary-color)]">Michael</p>
+<div class="h-2 flex-1 bg-[var(--border-color)] rounded-full"><div class="chart-bar h-full" style="width: 80%;"></div></div>
+</div>
+</div>
+</div>
+<div class="bg-[var(--surface-color)] p-6 rounded-xl shadow-sm border border-[var(--border-color)]">
+<h3 class="text-lg font-semibold mb-4">Monthly Trends</h3>
+<div class="h-64 flex flex-col">
+<div class="flex-1">
+<svg fill="none" height="100%" preserveAspectRatio="none" viewBox="0 0 472 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V150H0V109Z" fill="url(#paint0_linear_area)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="var(--brand-primary)" stroke-linecap="round" stroke-width="2"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_area" x1="236" x2="236" y1="1" y2="150">
+<stop stop-color="var(--brand-primary)" stop-opacity="0.2"></stop>
+<stop offset="1" stop-color="var(--brand-primary)" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+<div class="flex justify-between text-xs text-[var(--text-secondary-color)] pt-2 border-t border-[var(--border-color)]">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Server Error - SplitIt</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #1380ec;
+        --light-bg: #f8fafc;
+        --dark-bg: #0d141b;
+        --light-text: #0d141b;
+        --dark-text: #f8fafc;
+        --light-secondary-text: #64748b;
+        --dark-secondary-text: #94a3b8;
+      }
+      .dark {
+        --bg-color: var(--dark-bg);
+        --text-color: var(--dark-text);
+        --secondary-text-color: var(--dark-secondary-text);
+      }
+      .light {
+        --bg-color: var(--light-bg);
+        --text-color: var(--light-text);
+        --secondary-text-color: var(--light-secondary-text);
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+</head>
+<body class="light">
+<div class="relative flex size-full min-h-screen flex-col bg-[var(--bg-color)] group/design-root overflow-x-hidden transition-colors duration-300">
+<div class="flex-grow flex items-center justify-center p-4">
+<div class="w-full max-w-md text-center">
+<div class="flex justify-center mb-6">
+<div class="w-24 h-24 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-red-500">
+                cloud_off
+              </span>
+</div>
+</div>
+<h1 class="text-3xl md:text-4xl font-bold text-[var(--text-color)] mb-3">Oops! Server Not Found</h1>
+<p class="text-base md:text-lg text-[var(--secondary-text-color)] mb-4">
+            It seems we're having some trouble connecting to our servers. This could be temporary, or we might be performing some scheduled maintenance.
+          </p>
+<p class="text-sm text-[var(--secondary-text-color)] mb-8">
+            Please try again in a few moments. We appreciate your patience!
+          </p>
+<div class="flex justify-center">
+<button class="flex items-center justify-center gap-2 rounded-lg h-12 px-6 bg-[var(--primary-color)] text-white text-base font-semibold leading-normal tracking-wide shadow-lg shadow-blue-500/30 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-[var(--bg-color)] transition-all" onclick="window.history.back()">
+<span class="material-symbols-outlined">
+                arrow_back
+              </span>
+<span>Go Back</span>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute top-4 right-4">
+<button class="p-2 rounded-full text-[var(--secondary-text-color)] hover:bg-slate-200 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-[var(--bg-color)]" id="theme-toggle">
+<span class="material-symbols-outlined dark:hidden">light_mode</span>
+<span class="material-symbols-outlined hidden dark:inline">dark_mode</span>
+</button>
+</div>
+</div>
+<script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+      themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark');
+        body.classList.toggle('light');
+        // This is a simplified toggle, a real app would persist this preference
+      });
+      // Optional: Set initial theme based on user's system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !body.classList.contains('light')) {
+        body.classList.add('dark');
+      } else {
+        body.classList.add('light');
+      }
+    </script>
+
+</body></html>

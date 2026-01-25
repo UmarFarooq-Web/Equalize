@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>BillSplit</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-50: #f0f9ff;
+        --primary-100: #e0f2fe;
+        --primary-200: #bae6fd;
+        --primary-300: #7dd3fc;
+        --primary-400: #38bdf8;
+        --primary-500: #0ea5e9;
+        --primary-600: #0284c7;
+        --primary-700: #0369a1;
+        --primary-800: #075985;
+        --primary-900: #0c4a6e;
+        --primary-950: #082f49;
+      }
+    </style>
+</head>
+<body class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif'>
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 px-4 sm:px-6 lg:px-10 py-4">
+<div class="flex items-center gap-3 text-slate-900">
+<div class="size-8 text-primary-500">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 text-xl font-bold leading-tight tracking-[-0.015em]">
+            BillSplit
+          </h2>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex items-center gap-6">
+<a class="text-slate-600 hover:text-primary-500 text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<a class="text-slate-600 hover:text-primary-500 text-sm font-medium leading-normal transition-colors" href="#">How it works</a>
+<a class="text-slate-600 hover:text-primary-500 text-sm font-medium leading-normal transition-colors" href="#">Pricing</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary-500 text-white text-sm font-bold leading-normal tracking-wide hover:bg-primary-600 transition-colors">
+<span class="truncate">Sign up</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-100 text-slate-900 text-sm font-bold leading-normal tracking-wide hover:bg-slate-200 transition-colors">
+<span class="truncate">Log in</span>
+</button>
+</div>
+</div>
+<button class="md:hidden text-slate-600">
+<span class="material-symbols-outlined"> menu </span>
+</button>
+</header>
+<main class="flex-1">
+<div class="px-4 sm:px-6 lg:px-8 xl:px-20 2xl:px-40 py-10 sm:py-16">
+<div class="layout-content-container flex flex-col max-w-5xl mx-auto">
+<div class="w-full">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-2xl items-center justify-center p-4 text-center" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCkW0L_kLHUYSgFB7SqM2OpUiLmcSxeZh8v3gIvX0ZZiruHX_0RZw84eXPnmGlyIC7NV73E95HsSR0dLaIvTCx65cV9AkKqJbskgzx5A87DjPh9QKObggctI3ljTfST8AYwshcwZeH7N22SS0stX2An4FEQtvc1u-whsZw5Duf3-BKzrqcSqgyfwNjq_bKgciTdFtsnpfElG2mifxYNShOUEmIB4aInJeAJmRneb0i7WTtQhB19hzCHEuXRxziGKF2VK0AzK81G7fI");'>
+<div class="flex flex-col gap-4 max-w-2xl">
+<h1 class="text-white text-4xl md:text-5xl font-bold leading-tight tracking-tighter">
+                    Less stress when sharing expenses
+                  </h1>
+<p class="text-slate-200 text-base md:text-lg">
+                    Keep track of your shared expenses and balances with
+                    housemates, trips, groups, friends, and more.
+                  </p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary-500 text-white text-base font-bold leading-normal tracking-wide hover:bg-primary-600 transition-colors">
+<span class="truncate">Sign up for free</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-12 px-4 py-16 sm:py-24">
+<div class="flex flex-col gap-4 text-center items-center">
+<h2 class="text-slate-900 text-3xl md:text-4xl font-bold leading-tight tracking-tighter max-w-2xl">
+                  How BillSplit simplifies expense sharing
+                </h2>
+<p class="text-slate-600 text-base md:text-lg max-w-2xl">
+                  BillSplit is the easiest way to split bills with friends and
+                  family. We'll help you keep track of balances and make sure
+                  everyone gets paid back.
+                </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4 items-center text-center">
+<div class="flex items-center justify-center size-12 rounded-full bg-primary-100 text-primary-600">
+<span class="material-symbols-outlined text-3xl">
+                      groups
+                    </span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 text-lg font-semibold">
+                      Split with any group
+                    </h3>
+<p class="text-slate-500 text-sm">
+                      Whether it's roommates, friends, or travel buddies,
+                      BillSplit makes it easy to share expenses.
+                    </p>
+</div>
+</div>
+<div class="flex flex-col gap-4 items-center text-center">
+<div class="flex items-center justify-center size-12 rounded-full bg-primary-100 text-primary-600">
+<span class="material-symbols-outlined text-3xl">
+                      receipt_long
+                    </span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 text-lg font-semibold">
+                      Track expenses easily
+                    </h3>
+<p class="text-slate-500 text-sm">
+                      Easily add expenses with details like amount, payer, and
+                      who's involved.
+                    </p>
+</div>
+</div>
+<div class="flex flex-col gap-4 items-center text-center">
+<div class="flex items-center justify-center size-12 rounded-full bg-primary-100 text-primary-600">
+<span class="material-symbols-outlined text-3xl">
+                      payments
+                    </span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 text-lg font-semibold">
+                      Settle up quickly
+                    </h3>
+<p class="text-slate-500 text-sm">
+                      Settle balances with a click, using your preferred
+                      payment method.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-12 px-4 py-16 sm:py-24 bg-slate-100 rounded-2xl">
+<div class="flex flex-col gap-4 text-center items-center">
+<h2 class="text-slate-900 text-3xl md:text-4xl font-bold leading-tight tracking-tighter max-w-2xl">
+                  Split expenses for any occasion
+                </h2>
+<p class="text-slate-600 text-base md:text-lg max-w-2xl">
+                  BillSplit is perfect for any situation where you need to
+                  share costs. Here are a few ways you can use it:
+                </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTWl33d03MsKzYBSHwlLNmPcRgGxJ_Z0dCV_XOrJvJJtviQ5yH_uQV9GdmDwR-jtaHEznFmN_H_ozb6iznHHetEJ_-nNp_-2vCH3r8dSOfurhB1r2Q_vgM8kiH7_qby0PJe3zmKcO1tXRqOFDO5eKpz8D7vFEI-HEOw69qGY97MYZtsXO1KY9xAzNr7FTqzLwU5cVX9G-eViFpZeHqMVeRFBX3d_meMUvE6kA3SMBU8qnGIL2i1GDg9a6xtcuKJX8MXmgY4zJ-ELo");'></div>
+<div>
+<p class="text-slate-900 text-lg font-semibold">Trips</p>
+<p class="text-slate-500 text-sm">
+                      Split travel expenses with your group, from flights to
+                      meals.
+                    </p>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAL6jhwXBIxUuC9enFLUzYcTTzJnwbhVK3w9C275Onl3DX-r59AGBcChp4e0VExCqv4YRUsqYVLElAB2nVFpUxA0mBUf4zQSdFg7-iSlPxTNmHFxZQTb6xwPZTeoFsSS3gLfAnIPB3IZjiemRAhqn9kRgfK7eD0yxAfCKpkTWrKXmWA3Gz6_2IDF3jXq1LBY3MzZ1zdtuUqu3fVRZ4truI6QxXC4K_hJi3vjPInc5n2RIaNiPFIc33atXhX9o06ozcTBTh1fTtdSI8");'></div>
+<div>
+<p class="text-slate-900 text-lg font-semibold">Roommates</p>
+<p class="text-slate-500 text-sm">
+                      Manage shared household bills and expenses with your
+                      roommates.
+                    </p>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXBc51Jg7PLG_V4YZbzghYIrkd7yULN7uNnZy5-VzCYHSbjQUHa7zlbiJjIlKRhnwkr_a3yttChlyb9sZ-MBjQKjQucN4JEw-ov_oXGn1GYqouO-7lWGL4laTA6eBNFKtcjbgZHvEuHVivo2PPKY5wx7_uO6Bsz1m0YwiqfqGhoCxG9Iw63gt1b7Kbl0xDcoJTbXhyHrVPIoj6lzILzNGaAL5RGEqQ4yYjVTWPHsQJkqiH-y2uFXWJw7EgDhkD7Auvkzp3NFSN4MM");'></div>
+<div>
+<p class="text-slate-900 text-lg font-semibold">Groups</p>
+<p class="text-slate-500 text-sm">
+                      Easily share costs within any group, whether it's for
+                      events or regular activities.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center gap-6 px-4 py-16 sm:py-24 text-center">
+<div class="flex flex-col gap-4 max-w-2xl">
+<h2 class="text-slate-900 text-3xl md:text-4xl font-bold leading-tight tracking-tighter">
+                  Ready to simplify your shared expenses?
+                </h2>
+<p class="text-slate-600 text-base md:text-lg">
+                  Join BillSplit today and start splitting bills effortlessly.
+                </p>
+</div>
+<div class="flex justify-center">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary-500 text-white text-base font-bold leading-normal tracking-wide hover:bg-primary-600 transition-colors">
+<span class="truncate">Get started now</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="border-t border-slate-200">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="flex items-center gap-3 text-slate-900">
+<div class="size-8 text-primary-500">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 text-xl font-bold">BillSplit</h2>
+</div>
+<p class="text-slate-500 text-sm">
+                © 2024 BillSplit. All rights reserved.
+              </p>
+</div>
+<nav class="flex flex-wrap justify-center gap-x-6 gap-y-4">
+<a class="text-slate-600 hover:text-primary-500 text-sm font-medium transition-colors" href="#">About</a>
+<a class="text-slate-600 hover:text-primary-500 text-sm font-medium transition-colors" href="#">Contact</a>
+<a class="text-slate-600 hover:text-primary-500 text-sm font-medium transition-colors" href="#">Terms of Service</a>
+<a class="text-slate-600 hover:text-primary-500 text-sm font-medium transition-colors" href="#">Privacy Policy</a>
+</nav>
+<div class="flex justify-center gap-4">
+<a class="text-slate-500 hover:text-primary-500 transition-colors" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"></path>
+</svg>
+</a>
+<a class="text-slate-500 hover:text-primary-500 transition-colors" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path>
+</svg>
+</a>
+<a class="text-slate-500 hover:text-primary-500 transition-colors" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>BillSplit - Settings</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #137fec;
+        --secondary-color: #F8FAFC;
+        --text-primary: #1E293B;
+        --text-secondary: #64748B;
+        --border-color: #E2E8F0;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .dark body {
+        --secondary-color: #1E293B;
+        --text-primary: #F8FAFC;
+        --text-secondary: #94A3B8;
+        --border-color: #334155;
+        background-color: #0F172A;
+      }
+    </style>
+</head>
+<body class="bg-[var(--secondary-color)] text-[var(--text-primary)]">
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+<div class="flex-1">
+<header class="sticky top-0 z-20 flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-color)] bg-[var(--secondary-color)]/80 px-4 py-3 backdrop-blur-sm sm:px-6 lg:px-8">
+<div class="flex items-center gap-4">
+<div class="h-8 w-8 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold tracking-tight">BillSplit</h1>
+</div>
+<nav class="hidden items-center gap-6 text-sm font-medium lg:flex">
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-primary)]" href="#">Home</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-primary)]" href="#">Dashboard</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-primary)]" href="#">Activity</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-primary)]" href="#">Friends</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-100 text-[var(--text-secondary)] hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrqqiYtqUthJvhWvQa8J5lhi1Pd5oNYCTbZA3ke1jYIg_QMAwuZWUXCnpD2xb7t0WLxf6yZ45ruu1KoRYryuTY1bn4QCpgPI-oWOERWHm64kq4R0trWOR6Fq5NCXdRlrKHqb15_bxGaWuPmScpbajW1UxvVSQbkozZN5OxkYdTbfF06SeakSff3ikwateE3h0fi4nO5k7GCskEBlWhD1pIZet2fiuiZTRR3d-PLVxI8x3MYyEa5alZLxUvxSusFQz6trO7uC26csE");'></div>
+<button class="lg:hidden">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<main class="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+<div class="mb-8">
+<h1 class="text-4xl font-extrabold tracking-tight">Settings</h1>
+<p class="mt-2 text-lg text-[var(--text-secondary)]">Manage your account and preferences.</p>
+</div>
+<div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+<div class="lg:col-span-1">
+<nav class="sticky top-24 space-y-1">
+<a class="group flex items-center rounded-lg px-3 py-2 text-base font-medium text-[var(--text-primary)] bg-slate-100 dark:bg-slate-800" href="#profile">Profile</a>
+<a class="group flex items-center rounded-lg px-3 py-2 text-base font-medium text-[var(--text-secondary)] hover:bg-slate-100 dark:hover:bg-slate-800" href="#privacy">Privacy</a>
+<a class="group flex items-center rounded-lg px-3 py-2 text-base font-medium text-[var(--text-secondary)] hover:bg-slate-100 dark:hover:bg-slate-800" href="#preferences">Preferences</a>
+<a class="group flex items-center rounded-lg px-3 py-2 text-base font-medium text-[var(--text-secondary)] hover:bg-slate-100 dark:hover:bg-slate-800" href="#notifications">Notifications</a>
+<a class="group flex items-center rounded-lg px-3 py-2 text-base font-medium text-[var(--text-secondary)] hover:bg-slate-100 dark:hover:bg-slate-800" href="#security">Security &amp; Data</a>
+</nav>
+</div>
+<div class="space-y-12 lg:col-span-2">
+<section class="rounded-xl border border-[var(--border-color)] bg-white p-6 shadow-sm dark:bg-slate-900" id="profile">
+<h2 class="text-2xl font-bold tracking-tight">Profile</h2>
+<p class="mt-1 text-[var(--text-secondary)]">Update your photo and personal details.</p>
+<div class="mt-6 space-y-6">
+<div class="flex items-center gap-6">
+<img alt="User avatar" class="h-20 w-20 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrqqiYtqUthJvhWvQa8J5lhi1Pd5oNYCTbZA3ke1jYIg_QMAwuZWUXCnpD2xb7t0WLxf6yZ45ruu1KoRYryuTY1bn4QCpgPI-oWOERWHm64kq4R0trWOR6Fq5NCXdRlrKHqb15_bxGaWuPmScpbajW1UxvVSQbkozZN5OxkYdTbfF06SeakSff3ikwateE3h0fi4nO5k7GCskEBlWhD1pIZet2fiuiZTRR3d-PLVxI8x3MYyEa5alZLxUvxSusFQz6trO7uC26csE"/>
+<div class="space-x-2">
+<button class="rounded-lg bg-[var(--primary-color)] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[var(--primary-color)]/90">Change</button>
+<button class="rounded-lg bg-slate-100 px-4 py-2 text-sm font-semibold text-[var(--text-primary)] ring-1 ring-inset ring-[var(--border-color)] hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:ring-slate-700 dark:hover:bg-slate-700">Remove</button>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+<div>
+<label class="block text-sm font-medium leading-6 text-[var(--text-primary)]" for="name">Name</label>
+<input class="mt-2 block w-full rounded-lg border-0 bg-slate-100 py-2.5 text-[var(--text-primary)] ring-1 ring-inset ring-[var(--border-color)] focus:ring-2 focus:ring-inset focus:ring-[var(--primary-color)] dark:bg-slate-800 dark:ring-slate-700" id="name" type="text" value="Alex Doe"/>
+</div>
+<div>
+<label class="block text-sm font-medium leading-6 text-[var(--text-primary)]" for="handle">Handle</label>
+<input class="mt-2 block w-full rounded-lg border-0 bg-slate-100 py-2.5 text-[var(--text-primary)] ring-1 ring-inset ring-[var(--border-color)] focus:ring-2 focus:ring-inset focus:ring-[var(--primary-color)] dark:bg-slate-800 dark:ring-slate-700" id="handle" type="text" value="@alexdoe"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium leading-6 text-[var(--text-primary)]" for="bio">Bio</label>
+<textarea class="mt-2 block w-full rounded-lg border-0 bg-slate-100 py-2.5 text-[var(--text-primary)] ring-1 ring-inset ring-[var(--border-color)] focus:ring-2 focus:ring-inset focus:ring-[var(--primary-color)] dark:bg-slate-800 dark:ring-slate-700" id="bio" rows="3">Student, roommate, and trip enthusiast.</textarea>
+</div>
+</div>
+</section>
+<section class="rounded-xl border border-[var(--border-color)] bg-white p-6 shadow-sm dark:bg-slate-900" id="privacy">
+<h2 class="text-2xl font-bold tracking-tight">Privacy</h2>
+<p class="mt-1 text-[var(--text-secondary)]">Control who can interact with you.</p>
+<div class="mt-6 space-y-6">
+<div>
+<label class="text-base font-medium text-[var(--text-primary)]">Who can add me?</label>
+<fieldset class="mt-4">
+<div class="space-y-4">
+<div class="flex items-center">
+<input checked="" class="h-4 w-4 border-[var(--border-color)] text-[var(--primary-color)] focus:ring-[var(--primary-color)]" id="add-anyone" name="add-privacy" type="radio"/>
+<label class="ml-3 block text-sm font-medium leading-6 text-[var(--text-primary)]" for="add-anyone">Anyone</label>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 border-[var(--border-color)] text-[var(--primary-color)] focus:ring-[var(--primary-color)]" id="add-friends-of-friends" name="add-privacy" type="radio"/>
+<label class="ml-3 block text-sm font-medium leading-6 text-[var(--text-primary)]" for="add-friends-of-friends">Friends of friends</label>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 border-[var(--border-color)] text-[var(--primary-color)] focus:ring-[var(--primary-color)]" id="add-no-one" name="add-privacy" type="radio"/>
+<label class="ml-3 block text-sm font-medium leading-6 text-[var(--text-primary)]" for="add-no-one">No one</label>
+</div>
+</div>
+</fieldset>
+</div>
+<div>
+<label class="text-base font-medium text-[var(--text-primary)]">Who can search for me?</label>
+<fieldset class="mt-4">
+<div class="space-y-4">
+<div class="flex items-center">
+<input class="h-4 w-4 border-[var(--border-color)] text-[var(--primary-color)] focus:ring-[var(--primary-color)]" id="search-anyone" name="search-privacy" type="radio"/>
+<label class="ml-3 block text-sm font-medium leading-6 text-[var(--text-primary)]" for="search-anyone">Anyone</label>
+</div>
+<div class="flex items-center">
+<input checked="" class="h-4 w-4 border-[var(--border-color)] text-[var(--primary-color)] focus:ring-[var(--primary-color)]" id="search-friends" name="search-privacy" type="radio"/>
+<label class="ml-3 block text-sm font-medium leading-6 text-[var(--text-primary)]" for="search-friends">Only friends</label>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 border-[var(--border-color)] text-[var(--primary-color)] focus:ring-[var(--primary-color)]" id="search-no-one" name="search-privacy" type="radio"/>
+<label class="ml-3 block text-sm font-medium leading-6 text-[var(--text-primary)]" for="search-no-one">No one</label>
+</div>
+</div>
+</fieldset>
+</div>
+</div>
+</section>
+<section class="rounded-xl border border-[var(--border-color)] bg-white p-6 shadow-sm dark:bg-slate-900" id="preferences">
+<h2 class="text-2xl font-bold tracking-tight">Preferences</h2>
+<p class="mt-1 text-[var(--text-secondary)]">Customize your experience.</p>
+<div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+<div>
+<label class="block text-sm font-medium leading-6 text-[var(--text-primary)]" for="currency">Currency</label>
+<select class="mt-2 block w-full rounded-lg border-0 bg-slate-100 py-2.5 pl-3 pr-10 text-[var(--text-primary)] ring-1 ring-inset ring-[var(--border-color)] focus:ring-2 focus:ring-inset focus:ring-[var(--primary-color)] dark:bg-slate-800 dark:ring-slate-700" id="currency">
+<option>USD - United States Dollar</option>
+<option>EUR - Euro</option>
+<option>GBP - British Pound</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium leading-6 text-[var(--text-primary)]" for="locale">Language &amp; Region</label>
+<select class="mt-2 block w-full rounded-lg border-0 bg-slate-100 py-2.5 pl-3 pr-10 text-[var(--text-primary)] ring-1 ring-inset ring-[var(--border-color)] focus:ring-2 focus:ring-inset focus:ring-[var(--primary-color)] dark:bg-slate-800 dark:ring-slate-700" id="locale">
+<option>English (United States)</option>
+<option>English (United Kingdom)</option>
+<option>Español (España)</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium leading-6 text-[var(--text-primary)]" for="date-format">Date Format</label>
+<select class="mt-2 block w-full rounded-lg border-0 bg-slate-100 py-2.5 pl-3 pr-10 text-[var(--text-primary)] ring-1 ring-inset ring-[var(--border-color)] focus:ring-2 focus:ring-inset focus:ring-[var(--primary-color)] dark:bg-slate-800 dark:ring-slate-700" id="date-format">
+<option>MM/DD/YYYY</option>
+<option>DD/MM/YYYY</option>
+<option>YYYY-MM-DD</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium leading-6 text-[var(--text-primary)]" for="theme">Theme</label>
+<select class="mt-2 block w-full rounded-lg border-0 bg-slate-100 py-2.5 pl-3 pr-10 text-[var(--text-primary)] ring-1 ring-inset ring-[var(--border-color)] focus:ring-2 focus:ring-inset focus:ring-[var(--primary-color)] dark:bg-slate-800 dark:ring-slate-700" id="theme">
+<option>Light</option>
+<option>Dark</option>
+<option>System</option>
+</select>
+</div>
+</div>
+</section>
+<section class="rounded-xl border border-[var(--border-color)] bg-white p-6 shadow-sm dark:bg-slate-900" id="notifications">
+<h2 class="text-2xl font-bold tracking-tight">Notifications</h2>
+<p class="mt-1 text-[var(--text-secondary)]">Choose how you want to be notified.</p>
+<div class="mt-6 space-y-4">
+<div class="relative flex items-start">
+<div class="flex h-6 items-center">
+<input aria-describedby="email-notifications-description" checked="" class="h-4 w-4 rounded border-[var(--border-color)] text-[var(--primary-color)] focus:ring-[var(--primary-color)]" id="email-notifications" name="email-notifications" type="checkbox"/>
+</div>
+<div class="ml-3 text-sm leading-6">
+<label class="font-medium text-[var(--text-primary)]" for="email-notifications">Email Notifications</label>
+<p class="text-[var(--text-secondary)]" id="email-notifications-description">Get notified about new activity via email.</p>
+</div>
+</div>
+<div class="relative flex items-start">
+<div class="flex h-6 items-center">
+<input aria-describedby="push-notifications-description" checked="" class="h-4 w-4 rounded border-[var(--border-color)] text-[var(--primary-color)] focus:ring-[var(--primary-color)]" id="push-notifications" name="push-notifications" type="checkbox"/>
+</div>
+<div class="ml-3 text-sm leading-6">
+<label class="font-medium text-[var(--text-primary)]" for="push-notifications">Push Notifications</label>
+<p class="text-[var(--text-secondary)]" id="push-notifications-description">Receive alerts directly on your device.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="rounded-xl border border-[var(--border-color)] bg-white p-6 shadow-sm dark:bg-slate-900" id="security">
+<h2 class="text-2xl font-bold tracking-tight">Security &amp; Data</h2>
+<p class="mt-1 text-[var(--text-secondary)]">Manage your security settings and data.</p>
+<div class="mt-6 divide-y divide-[var(--border-color)]">
+<a class="group flex items-center justify-between py-4" href="#">
+<div>
+<p class="font-medium text-[var(--text-primary)]">Change Password</p>
+<p class="text-sm text-[var(--text-secondary)]">Choose a new, strong password.</p>
+</div>
+<span class="material-symbols-outlined text-[var(--text-secondary)] group-hover:text-[var(--text-primary)]">chevron_right</span>
+</a>
+<a class="group flex items-center justify-between py-4" href="#">
+<div>
+<p class="font-medium text-[var(--text-primary)]">Two-Factor Authentication</p>
+<p class="text-sm text-[var(--text-secondary)]">Add an extra layer of security to your account.</p>
+</div>
+<span class="material-symbols-outlined text-[var(--text-secondary)] group-hover:text-[var(--text-primary)]">chevron_right</span>
+</a>
+<a class="group flex items-center justify-between py-4" href="#">
+<div>
+<p class="font-medium text-[var(--text-primary)]">Active Sessions</p>
+<p class="text-sm text-[var(--text-secondary)]">See where your account is logged in.</p>
+</div>
+<span class="material-symbols-outlined text-[var(--text-secondary)] group-hover:text-[var(--text-primary)]">chevron_right</span>
+</a>
+<a class="group flex items-center justify-between py-4" href="#">
+<div>
+<p class="font-medium text-[var(--text-primary)]">Export Data</p>
+<p class="text-sm text-[var(--text-secondary)]">Download a copy of your personal data.</p>
+</div>
+<span class="material-symbols-outlined text-[var(--text-secondary)] group-hover:text-[var(--text-primary)]">chevron_right</span>
+</a>
+<a class="group flex items-center justify-between py-4" href="#">
+<div>
+<p class="font-medium text-red-600 dark:text-red-500">Delete Account</p>
+<p class="text-sm text-[var(--text-secondary)]">Permanently delete your account and all data.</p>
+</div>
+<span class="material-symbols-outlined text-[var(--text-secondary)] group-hover:text-red-600 dark:group-hover:text-red-500">chevron_right</span>
+</a>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

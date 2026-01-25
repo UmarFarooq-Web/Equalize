@@ -1,0 +1,208 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>BillSplit Dashboard</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --foreground: #141414;
+        --background: #FFFFFF;
+        --primary: #141414;
+        --primary-foreground: #F8F8F8;
+        --secondary: #F1F5F9;
+        --secondary-foreground: #334155;
+        --muted: #F8FAFC;
+        --muted-foreground: #64748B;
+        --accent: #E2E8F0;
+        --accent-foreground: #0F172A;
+        --destructive: #EF4444;
+        --destructive-foreground: #F8F8F8;
+        --border: #E2E8F0;
+        --ring: #94A3B8;
+        --foreground-dark: #F8F8F8;
+        --background-dark: #020817;
+        --primary-dark: #F8F8F8;
+        --primary-foreground-dark: #141414;
+        --secondary-dark: #1E293B;
+        --secondary-foreground-dark: #E2E8F0;
+        --muted-dark: #0F172A;
+        --muted-foreground-dark: #94A3B8;
+        --accent-dark: #1E293B;
+        --accent-foreground-dark: #F8F8F8;
+        --destructive-dark: #7F1D1D;
+        --destructive-foreground-dark: #F8F8F8;
+        --border-dark: #1E293B;
+        --ring-dark: #475569;
+      }
+      .dark {
+        --foreground: var(--foreground-dark);
+        --background: var(--background-dark);
+        --primary: var(--primary-dark);
+        --primary-foreground: var(--primary-foreground-dark);
+        --secondary: var(--secondary-dark);
+        --secondary-foreground: var(--secondary-foreground-dark);
+        --muted: var(--muted-dark);
+        --muted-foreground: var(--muted-foreground-dark);
+        --accent: var(--accent-dark);
+        --accent-foreground: var(--accent-foreground-dark);
+        --destructive: var(--destructive-dark);
+        --destructive-foreground: var(--destructive-foreground-dark);
+        --border: var(--border-dark);
+        --ring: var(--ring-dark);
+      }
+    </style>
+</head>
+<body class="bg-background text-foreground dark:bg-background-dark dark:text-foreground-dark" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 flex h-16 items-center justify-between whitespace-nowrap border-b border-border bg-background/80 px-4 backdrop-blur-sm sm:px-6 lg:px-10 dark:bg-background-dark/80">
+<div class="flex items-center gap-4">
+<svg class="h-8 w-8 text-primary dark:text-primary-dark" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+<h1 class="text-xl font-bold tracking-tight text-primary dark:text-primary-dark">BillSplit</h1>
+</div>
+<nav class="hidden items-center gap-6 md:flex">
+<a class="text-sm font-medium text-muted-foreground transition-colors hover:text-primary dark:text-muted-foreground-dark dark:hover:text-primary-dark" href="#">Dashboard</a>
+<a class="text-sm font-medium text-muted-foreground transition-colors hover:text-primary dark:text-muted-foreground-dark dark:hover:text-primary-dark" href="#">Bills</a>
+<a class="text-sm font-medium text-muted-foreground transition-colors hover:text-primary dark:text-muted-foreground-dark dark:hover:text-primary-dark" href="#">Groups</a>
+<a class="text-sm font-medium text-muted-foreground transition-colors hover:text-primary dark:text-muted-foreground-dark dark:hover:text-primary-dark" href="#">Friends</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-secondary-foreground transition-colors hover:bg-accent dark:bg-secondary-dark dark:text-secondary-foreground-dark dark:hover:bg-accent-dark">
+<span class="material-symbols-outlined text-2xl"> notifications </span>
+</button>
+<div class="h-10 w-10 overflow-hidden rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD07fq7qLoGJG-eanZ0rFC9rHocB3W9nzLgz1qA6E7NoiKgDWOC2lgPUsnhEcT7_NfTuaQf3WHqHmRBz7Z-8ZxhscTc1YTfCqkaYVMCLwsyOJ1OtnkrAoNHWE3ji36sNTqNYY9hqTnGK5uiLwmP2AUPyAIaPwwUtwb5TwQHFN4jYyQTQxsKS-s-SHZSuOlNJxuuqNS7JH0ktesklC4v63yX5SzMEzX4QvXzUg3kCCmmTNb-bBtu0jGa6JOIRjpquvKRGD8irGi1D70");'></div>
+<button class="md:hidden flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-secondary-foreground transition-colors hover:bg-accent dark:bg-secondary-dark dark:text-secondary-foreground-dark dark:hover:bg-accent-dark">
+<span class="material-symbols-outlined text-2xl"> menu </span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 flex-col gap-8 p-4 md:flex-row md:gap-12 md:p-6 lg:p-10">
+<div class="flex flex-col gap-6 md:w-1/3 lg:w-1/4">
+<div class="grid grid-cols-2 gap-4">
+<div class="rounded-xl border border-border bg-card p-4 shadow-sm dark:bg-muted-dark/20">
+<p class="text-sm font-medium text-muted-foreground">You owe</p>
+<p class="text-2xl font-bold text-destructive">$12.50</p>
+</div>
+<div class="rounded-xl border border-border bg-card p-4 shadow-sm dark:bg-muted-dark/20">
+<p class="text-sm font-medium text-muted-foreground">You're owed</p>
+<p class="text-2xl font-bold text-green-600">$35.00</p>
+</div>
+<div class="rounded-xl border border-border bg-card p-4 shadow-sm dark:bg-muted-dark/20">
+<p class="text-sm font-medium text-muted-foreground">Net balance</p>
+<p class="text-2xl font-bold text-green-600">$22.50</p>
+</div>
+<div class="rounded-xl border border-border bg-card p-4 shadow-sm dark:bg-muted-dark/20">
+<p class="text-sm font-medium text-muted-foreground">This month</p>
+<p class="text-2xl font-bold">$10.00</p>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<button class="flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-primary text-primary-foreground shadow-md transition-all hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 dark:bg-primary-dark dark:text-primary-foreground-dark dark:hover:bg-primary-dark/90">
+<span class="material-symbols-outlined"> add </span>
+<span class="truncate text-sm font-bold">Create Bill</span>
+</button>
+<button class="flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-secondary text-secondary-foreground shadow-sm transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 dark:bg-secondary-dark dark:text-secondary-foreground-dark dark:hover:bg-accent-dark">
+<span class="material-symbols-outlined"> person_add </span>
+<span class="truncate text-sm font-bold">Add Friend</span>
+</button>
+<button class="flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-secondary text-secondary-foreground shadow-sm transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 dark:bg-secondary-dark dark:text-secondary-foreground-dark dark:hover:bg-accent-dark">
+<span class="material-symbols-outlined"> group_add </span>
+<span class="truncate text-sm font-bold">Create Group</span>
+</button>
+<button class="flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-secondary text-secondary-foreground shadow-sm transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 dark:bg-secondary-dark dark:text-secondary-foreground-dark dark:hover:bg-accent-dark">
+<span class="material-symbols-outlined"> receipt_long </span>
+<span class="truncate text-sm font-bold">Scan Receipt</span>
+</button>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-8">
+<div>
+<h2 class="mb-4 text-xl font-bold">Recent Activity</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-4 rounded-lg p-3 transition-colors hover:bg-muted dark:hover:bg-muted-dark/50">
+<div class="h-12 w-12 flex-shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGZd67OojqYzJGNVH6Iy8Hb-pijHfjNKlL3hj0r_Bz9LF22s_LVD6aMQNqmMkk6mbrsdqgLuiqusMSxefi_ni5EXmCr2x665ilL9S7LgC424eGsAYaQ1qyzk-r6DgiQjyj9XKsNn5OSSDEpR7C4gYxOGaetpwinL3EURkK-KmC1FC5F_ymnuuaFjIK_rzy83T3D5RnIWxSt7U83N-p6novnjsS7y4sZcZ91VMoKBqI6Xr5wqVdFJYfzduFzQ0r4DFU1qd30BtRq4Y");'></div>
+<div class="flex-1">
+<p class="font-medium">Dinner at The Italian Place</p>
+<p class="text-sm text-muted-foreground">You paid $20 to Alex for dinner</p>
+</div>
+<div class="text-right text-sm text-muted-foreground">
+<p>-$20.00</p>
+<p>Yesterday</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg p-3 transition-colors hover:bg-muted dark:hover:bg-muted-dark/50">
+<div class="h-12 w-12 flex-shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIZyb6DCdqe_Uqc6m1IiDr8YP0LrI8esZtDUwZIufddLUVXlNtnsboI3133jGE2CYjTTHPusq_xwE_MFsqt9Wfxtdt9lTLXUerQn2fn9qzNm9pHvOtcVHsURcLxEuRw_u0cqPQ66DruHOzmDr-QzGohFw4i6PKGCKQW7b_VGKGDf2cPEXsmxUzvlaeLm1-_kmSuabncydx6ZoqbEA8xtD8yQN0iAO-b7RcwuxR0G9TETpMgk2LFdRC1Di6Ef_2Hk8oH_l432d88Ws");'></div>
+<div class="flex-1">
+<p class="font-medium">Groceries</p>
+<p class="text-sm text-muted-foreground">You paid $15 to Sarah for groceries</p>
+</div>
+<div class="text-right text-sm text-muted-foreground">
+<p>-$15.00</p>
+<p>2 days ago</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg p-3 transition-colors hover:bg-muted dark:hover:bg-muted-dark/50">
+<div class="h-12 w-12 flex-shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBUEfHqrJ0Rpo0GFF9EeulxT0zMS3X-kqaJL4jyWCZnr6vdeyC0CwzEPgQUJLWz3pivn8FdRtZ6H_bqdgloA_oHhu9cFbewprQ8zd-jXUa-RBgNxlUQqKebN59PEnnhZhbTBjDo5qlbCWI6zhNc-nRgZ7FDvHdoiPA513Wo0ODJj4c-NSUw862_3KMQB8Oqu6EI5_CiWYdWSNrQ2tWkAhxfXxAvYJfOvrnLUTOVARjjpYS176mcc6b64F9yb33j5qiIGlDjX17dkT0");'></div>
+<div class="flex-1">
+<p class="font-medium">Coffee</p>
+<p class="text-sm text-muted-foreground">You paid $10 to Ben for coffee</p>
+</div>
+<div class="text-right text-sm text-muted-foreground">
+<p>-$10.00</p>
+<p>Mar 25</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg p-3 transition-colors hover:bg-muted dark:hover:bg-muted-dark/50">
+<div class="h-12 w-12 flex-shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVAsHeFo5QLdgyNW5pQ6tJIME8409lbjMh-0J4wfEdbXsaEVK5-YaHE83ynI14iZtsjKToB6waRXVRWpKxZp5bG_k8TI0KRJ_kVSGejWR9j8IrV94dEqI2amC7-oz_4TJlyPPZfetr-uoIxY2mp6VAHdGnzWvdo_HtAW-aYGqBYD4baO3Wa2KNJKt5JvMuuQf1sc_CcwRmmjDFlJTsScf3-Np3sUMp--HUCtuId1foOfM1Iwy0ud9itz8BoXJz6YYoJxF7LX6-TkY");'></div>
+<div class="flex-1">
+<p class="font-medium">Movie Night</p>
+<p class="text-sm text-muted-foreground">You paid $25 to Emily for movie tickets</p>
+</div>
+<div class="text-right text-sm text-muted-foreground">
+<p>-$25.00</p>
+<p>Mar 23</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h2 class="mb-4 text-xl font-bold">Tips</h2>
+<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+<div class="flex cursor-pointer items-center gap-4 rounded-lg border border-border bg-card p-4 shadow-sm transition-all hover:shadow-md dark:bg-muted-dark/20 dark:hover:border-accent-dark">
+<div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-secondary dark:bg-secondary-dark">
+<span class="material-symbols-outlined text-2xl text-secondary-foreground dark:text-secondary-foreground-dark"> group_add </span>
+</div>
+<div>
+<p class="font-medium">Add Friends</p>
+<p class="text-sm text-muted-foreground">Easily split bills and track expenses.</p>
+</div>
+</div>
+<div class="flex cursor-pointer items-center gap-4 rounded-lg border border-border bg-card p-4 shadow-sm transition-all hover:shadow-md dark:bg-muted-dark/20 dark:hover:border-accent-dark">
+<div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-secondary dark:bg-secondary-dark">
+<span class="material-symbols-outlined text-2xl text-secondary-foreground dark:text-secondary-foreground-dark"> add_circle </span>
+</div>
+<div>
+<p class="font-medium">Create a Bill</p>
+<p class="text-sm text-muted-foreground">Split expenses with friends or groups.</p>
+</div>
+</div>
+<div class="flex cursor-pointer items-center gap-4 rounded-lg border border-border bg-card p-4 shadow-sm transition-all hover:shadow-md dark:bg-muted-dark/20 dark:hover:border-accent-dark">
+<div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-secondary dark:bg-secondary-dark">
+<span class="material-symbols-outlined text-2xl text-secondary-foreground dark:text-secondary-foreground-dark"> photo_camera </span>
+</div>
+<div>
+<p class="font-medium">Scan Receipts</p>
+<p class="text-sm text-muted-foreground">Quickly add expenses to your bills.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

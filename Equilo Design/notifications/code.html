@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>BillSplit - Notifications</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-50: #eff6ff;
+      --primary-100: #dbeafe;
+      --primary-200: #bfdbfe;
+      --primary-300: #93c5fd;
+      --primary-400: #60a5fa;
+      --primary-500: #3b82f6;
+      --primary-600: #2563eb;
+      --primary-700: #1d4ed8;
+      --primary-800: #1e40af;
+      --primary-900: #1e3a8a;
+      --primary-950: #172554;
+      --secondary-50: #f8fafc;
+      --secondary-100: #f1f5f9;
+      --secondary-200: #e2e8f0;
+      --secondary-300: #cbd5e1;
+      --secondary-400: #94a3b8;
+      --secondary-500: #64748b;
+      --secondary-600: #475569;
+      --secondary-700: #334155;
+      --secondary-800: #1e293b;
+      --secondary-900: #0f172a;
+      --secondary-950: #020617;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .dark .dark\:bg-secondary-900 {
+        background-color: var(--secondary-900)
+    }
+    .dark .dark\:bg-secondary-800 {
+        background-color: var(--secondary-800)
+    }
+    .dark .dark\:text-secondary-50 {
+        color: var(--secondary-50)
+    }
+    .dark .dark\:text-secondary-400 {
+        color: var(--secondary-400)
+    }
+     .dark .dark\:border-secondary-700 {
+        border-color: var(--secondary-700)
+    }
+    .dark .dark\:hover\:bg-secondary-700:hover {
+        background-color: var(--secondary-700)
+    }
+  </style>
+</head>
+<body class="bg-secondary-50 dark:bg-secondary-900 text-secondary-800 dark:text-secondary-100">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-secondary-200 dark:border-secondary-800 px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-secondary-900 dark:text-secondary-50">
+<div class="size-6 text-primary-600">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tighter">BillSplit</h2>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary-600 transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium hover:text-primary-600 transition-colors" href="#">Expenses</a>
+<a class="text-sm font-medium hover:text-primary-600 transition-colors" href="#">Groups</a>
+<a class="text-sm font-medium hover:text-primary-600 transition-colors" href="#">Friends</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center rounded-full h-10 w-10 hover:bg-secondary-200 dark:hover:bg-secondary-800 transition-colors">
+<span class="material-symbols-outlined text-secondary-600 dark:text-secondary-400">
+              notifications
+            </span>
+</button>
+<button class="flex items-center justify-center rounded-full h-10 w-10 hover:bg-secondary-200 dark:hover:bg-secondary-800 transition-colors">
+<span class="material-symbols-outlined text-secondary-600 dark:text-secondary-400">
+              help
+            </span>
+</button>
+<button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDy9TC9U1kA9UEhGR78CHXi1FSMGCp43fWw0stM2BErkL3TNii0CqhQuvkqthJp9vBdvjNmXJcAW4eVOtS6SeT-7aGnoLyC9gZ12r544z6BNRggQmvzSLnNj-eXbej3YKkYp7jwmz-zgkg2-ZOe4Ck16eh3oVuQGEhh1PXyRBVRIlZoyMsR7jDHtZpqSBXywe2XRq3Sc83wqiQQfN_1q0dHxZQ8WkkyIlwQqBXpEwtmpfty1FK31KN1P15KwkdRA6vUlWdxsqIis4w");'></div>
+</button>
+</div>
+</header>
+<main class="px-4 sm:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1 gap-6">
+<div class="flex flex-wrap justify-between items-center gap-4">
+<h1 class="text-3xl font-bold tracking-tight">Notifications</h1>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 min-w-[84px] max-w-[480px] cursor-pointer justify-center overflow-hidden rounded-md h-9 px-4 bg-secondary-200 dark:bg-secondary-800 text-secondary-800 dark:text-secondary-100 text-sm font-medium hover:bg-secondary-300 dark:hover:bg-secondary-700 transition-colors">
+<span class="material-symbols-outlined text-base">done_all</span>
+<span class="truncate">Mark all as read</span>
+</button>
+<button class="flex items-center justify-center rounded-full h-9 w-9 hover:bg-secondary-200 dark:hover:bg-secondary-800 transition-colors">
+<span class="material-symbols-outlined text-secondary-600 dark:text-secondary-400">
+                    settings
+                </span>
+</button>
+</div>
+</div>
+<div class="border-b border-secondary-200 dark:border-secondary-800">
+<div class="flex gap-2 sm:gap-6">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary-600 text-primary-600 pb-3 pt-2 px-2" href="#">
+<p class="text-sm font-semibold">All</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-secondary-500 hover:text-secondary-800 dark:hover:text-secondary-200 dark:text-secondary-400 pb-3 pt-2 px-2" href="#">
+<p class="text-sm font-semibold">Requests</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-secondary-500 hover:text-secondary-800 dark:hover:text-secondary-200 dark:text-secondary-400 pb-3 pt-2 px-2" href="#">
+<p class="text-sm font-semibold">Mentions</p>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-bold">Today</h3>
+<div class="flex flex-col divide-y divide-secondary-200 dark:divide-secondary-800 rounded-lg border border-secondary-200 dark:border-secondary-800 bg-white dark:bg-secondary-900 shadow-sm">
+<div class="flex items-center gap-4 p-4 hover:bg-secondary-50 dark:hover:bg-secondary-800/50 transition-colors cursor-pointer">
+<div class="flex-shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAfagtvmg_DLrlWrg79gvzkpoEkp3h3-1saUZpBFjP_IhT0Xa-NIoTMq4HRDUsLbKLYONLoITgsaX-OLik86EQgKiLv9D3ntXDN3Hj2YaiMGOEqx2Eq4hzWgswV4zXQfj-bDkxIaO6583_Sae90bis06MjznzQY-M_pMr_H9Ut-Li68_4IIStqlcYxSZHxlJCszMih8N_zFvbLtXuM7XgQXVlgcvktI4q9lyi5AdInpW-Zcw5Xi71clo409aWi-nSR4st-T862kvwA");'></div>
+</div>
+<div class="flex-1">
+<p class="text-base font-medium">Liam requested to add you as a friend</p>
+<p class="text-sm text-secondary-500 dark:text-secondary-400">2 hours ago</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-9 px-4 bg-primary-600 text-white text-sm font-medium hover:bg-primary-700 transition-colors">
+<span class="truncate">Accept</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-9 px-4 bg-secondary-200 dark:bg-secondary-800 text-secondary-800 dark:text-secondary-100 text-sm font-medium hover:bg-secondary-300 dark:hover:bg-secondary-700 transition-colors">
+<span class="truncate">Decline</span>
+</button>
+</div>
+</div>
+<a class="flex items-center gap-4 p-4 hover:bg-secondary-50 dark:hover:bg-secondary-800/50 transition-colors" href="#">
+<div class="flex-shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuArA6GXj8FH423WkHEcJ0BfDjSuXAaokVEZaB0ObNq9FoOGvOQnoSjNIxe07neyZdsXiscxlZFccyrP9C51wI7snjUiiHCIlLL_Wu4b7Ku7x3UjyGxmwNsaou7cn6FImnA15K-hIGtCqp1TKhkqJxOusuPsRHM0xtpr6AG-AvMv5BXYf3PciJjA77bX5zVrCtS-V_VSCXS8NrZ_nV02XdtvExzRBEeorsb3G485jla5rzuo0iOfOIRcxrDhIklc-pXW8LMSxibbdjg");'></div>
+</div>
+<div class="flex-1">
+<p class="text-base font-medium">You've been added to the 'Trip to Tahoe' group</p>
+<p class="text-sm text-secondary-500 dark:text-secondary-400">1d</p>
+</div>
+<div class="shrink-0 text-secondary-400">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</a>
+<a class="flex items-center gap-4 p-4 hover:bg-secondary-50 dark:hover:bg-secondary-800/50 transition-colors" href="#">
+<div class="flex-shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD7a5hm_E-RWeJNzWx8RE5nPeZd8eZbRtizzws_CChHXZrJhraSSYPF2_6Njv7oTtaeqvr6zZqcc-euvNwKFRrdfUHuI2pkkh998BfQCf7CKh0BvsmZzGZQGhuRwQ74fy7kwhQ7C2gQ2yp88srlFG5UNNLt50KykN_K5ymgubGy7WQWGFKgtBn15R-PhLULjruIJIh_kQa7YwZ94g5B55oyJN9L8rhsfaJG61o5U3w7xDLNs7kcGRVNfAR5YIz1zAIYS83VXclrp5Y");'></div>
+</div>
+<div class="flex-1">
+<p class="text-base font-medium">Olivia paid you $25 for 'Groceries'</p>
+<p class="text-sm text-secondary-500 dark:text-secondary-400">1d</p>
+</div>
+<div class="shrink-0 text-secondary-400">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</a>
+</div>
+<h3 class="text-lg font-bold pt-4">Yesterday</h3>
+<div class="flex flex-col divide-y divide-secondary-200 dark:divide-secondary-800 rounded-lg border border-secondary-200 dark:border-secondary-800 bg-white dark:bg-secondary-900 shadow-sm">
+<a class="flex items-center gap-4 p-4 hover:bg-secondary-50 dark:hover:bg-secondary-800/50 transition-colors" href="#">
+<div class="flex-shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEDRa0qT1ZbOSqe-lBlOLDyK_nU-o-LRKztB2F_TVkPN_zkAp7vybTWsDvvvrp6XFv9_jwYcz6GRkeVbRm998MkQDLtB2Ca_Fm9yQ_lnWnikFvGKw84G3a_BCXi4YEI8UQKT3aI-eYMWzSRD7aURoZ8lRw2rgClt3pAvGG-0Kp0Ajhj4suyq6aWc-67upGN5QPnjRqzTJtMrtb1qfSOrDivKm6FzCiq5yZuU4RgtMxdmzQEjZKMgKofXOARTQf-O6dfZPTSgsh1YQ");'></div>
+</div>
+<div class="flex-1">
+<p class="text-base font-medium">You were mentioned in 'Trip to Tahoe'</p>
+<p class="text-sm text-secondary-500 dark:text-secondary-400">2d</p>
+</div>
+<div class="shrink-0 text-secondary-400">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

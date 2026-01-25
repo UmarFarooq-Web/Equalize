@@ -1,0 +1,138 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B600%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Splitr - Groups</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+      :root {
+        --primary-50: #f0f9ff;
+        --primary-100: #e0f2fe;
+        --primary-200: #bae6fd;
+        --primary-300: #7dd3fc;
+        --primary-400: #38bdf8;
+        --primary-500: #0ea5e9;
+        --primary-600: #0284c7;
+        --primary-700: #0369a1;
+        --primary-800: #075985;
+        --primary-900: #0c4a6e;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      .dark .dark\:bg-neutral-900 {
+        background-color: #171717;
+      }
+      .dark .dark\:bg-neutral-800 {
+        background-color: #262626;
+      }
+      .dark .dark\:text-neutral-50 {
+        color: #fafafa;
+      }
+      .dark .dark\:text-neutral-400 {
+        color: #a3a3a3;
+      }
+       .dark .dark\:border-neutral-700 {
+        border-color: #404040;
+      }
+      .dark .dark\:hover\:bg-neutral-700:hover {
+        background-color: #404040;
+      }
+    </style>
+</head>
+<body class="bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-neutral-200 dark:border-neutral-700 px-6 md:px-10 py-4">
+<div class="flex items-center gap-3 text-neutral-900 dark:text-neutral-50">
+<svg class="h-8 w-8 text-primary-500" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+<h2 class="text-xl font-bold tracking-tighter">Splitr</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-50 transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-50 transition-colors" href="#">Expenses</a>
+<a class="text-sm font-semibold text-neutral-900 dark:text-neutral-50" href="#">Groups</a>
+<a class="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-50 transition-colors" href="#">Friends</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-full h-10 w-10 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors">
+<span class="material-symbols-outlined text-neutral-600 dark:text-neutral-400"> notifications </span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGeB0CA0Hfy8bvkpIM2IyHiRsjnqkmqVBbgi_atz_BrnE13_sAts3ryF6hhPhWzOD4KH6vIeiE7lwMKONtXchF4nq1R0jNIJpm1x35m3rolGc6XNRhs0CEd2KBrv-hRlt4Hzd1WFaWJ5DCutQ5SMnJj7PFM_qwaynD2kpQMsywT4do6MDRSDymJz0ivkvhCm0KwAZcWwAZIUhn0rbe8bv1R0SSTRgQ-02kJag8Tntf-DgFpGubhJ0BEdzk9E_kAbWvYKtR5_Cn8fA");'></div>
+</div>
+</header>
+<main class="flex-1 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-40 py-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+<h1 class="text-3xl md:text-4xl font-bold tracking-tight">Groups</h1>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary-500 hover:bg-primary-600 text-white text-sm font-semibold shadow-sm transition-colors">
+<span class="material-symbols-outlined"> add </span>
+<span class="truncate">New Group</span>
+</button>
+</div>
+<div class="border-b border-neutral-200 dark:border-neutral-700 mb-6">
+<div class="flex gap-6">
+<a class="flex items-center gap-2 pb-3 border-b-2 border-primary-500 text-primary-500" href="#">
+<span class="material-symbols-outlined text-lg"> grid_view </span>
+<p class="text-sm font-semibold">Grid</p>
+</a>
+<a class="flex items-center gap-2 pb-3 border-b-2 border-transparent text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-50 hover:border-neutral-300 dark:hover:border-neutral-600 transition-all" href="#">
+<span class="material-symbols-outlined text-lg"> list </span>
+<p class="text-sm font-semibold">List</p>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDYoS-kv1WUm6M-v2tYcGODE1HGAY3x9XYCIw5pKweYU3VodFw4gf-hYVIcOMflqx6_BoYiO_yOMtGE2nv8AiHWI9RFCdnAxjLVF-TjBt6Nny22Ld24JYr6zQiX6kWbewhC9XdQSla6E3mnK0cqpO5ok4D5j_ngCfM5FefkbC7jd02hvYVQ2_-TspMuYJjm7gYejXVTJSAtJtw1rkmGeE74mgE_hqQbJgnFtlz_qWuBl9vC6oCU9YuFCEWIa6wSg2nz0y9_mLv10eU");'></div>
+<div>
+<p class="text-base font-semibold text-neutral-800 dark:text-neutral-200">Trip to the Mountains</p>
+<p class="text-sm text-neutral-500 dark:text-neutral-400">4 members · <span class="text-red-500">-$120</span></p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDVdY0I4Pnnt-lbRsoajw653JVi5O2-RX78tsaOllGZ8D4SdDztJRh78dob0G5n40-CCI-7660o1abI31cf9BCeskS3SYvpsSJkzAWHPanJVDL82bZKZqdYdMlhYyzkgec105w9Kmz7bkfcjfajFRgXP6NUfbWygtUKVSXXuzjumwsbdLg0VvpUt1V3Kd-hHNYDDhuxDUHxdlQMQxByj2MXjad8ANpP5xXWzS6s4uvf_vCk5Z_Uf3QuxzeP44s5Dgar4-do4dVbMW8");'></div>
+<div>
+<p class="text-base font-semibold text-neutral-800 dark:text-neutral-200">Roommates</p>
+<p class="text-sm text-neutral-500 dark:text-neutral-400">2 members · $0</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAA-vCzbiE256iKa0QrMeIOOGHgYMhHcnTp2N7Oe6jszyErc7kBzq5hQB1KpSHy3K6cYuqcgaVj_ok4zussymsLf0Zh5tTdEqNukyHAS-uf8PwHt7W1koQ2S-Knf6lazlK1DW7lrSM5UYivAjYNfspgb5jM0CcrNjFoWM0DcVzrqqlFe_YujODpWybo3_PHViw8huW5YojqJKhAtGuOejjHJF9ufjUA1nb6SEYhqqTICjL7fNFIA3u_qneqcpgLW3fqMIXtKKHmlbg");'></div>
+<div>
+<p class="text-base font-semibold text-neutral-800 dark:text-neutral-200">Weekend Getaway</p>
+<p class="text-sm text-neutral-500 dark:text-neutral-400">6 members · <span class="text-red-500">-$350</span></p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2FBeKCkXM6zdYNyi8pMXyrF6kqwf1dfrb9bHXWJJQ80BYUIPrxK5FhX0OGi-1M5C_RgyTGpE1mVpREXAirgZ60rQ9hPyPh_9YDJ05N4YW-TABxAn0rs7SXjfGg7eTEl66nrwr4qibn0h2El5Q_cBpo8umyoPbkZVYUXrMMba1nFn7KqD9no5DU93zUBrOuP_ICti8rLq8mUi2Ud8NbD0KKFN7SojHvn5MTQMY6Kl5no6D86fUOhtrYBvnYpbq8xUp2oSfV23_nQc");'></div>
+<div>
+<p class="text-base font-semibold text-neutral-800 dark:text-neutral-200">Soccer Team</p>
+<p class="text-sm text-neutral-500 dark:text-neutral-400">10 members · $0</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-w9sxcob7ULTEcHIfU98m2FapWRoGrs9qfUF0_BU7-eM--sUguJg9hUSBWJu6eMDLW2cyPaIIxu-00qFrfEb8TdXQs7whu7YSh4Dk_LJaWsmHf5v_UC3LyT_kE3nCTATNw5vXsM3RqNMo7wTZUoXpjoEpccT6nhS5pvNSXdGbc447aepwgxNKCFlDdVEenbrDI8gCKleecgOgNduxYTa8MpK_X-RmiRjokjVrhsZwFXwanLcQ2hwhIuH_OWAB4_hisXGkUDyoAAk");'></div>
+<div>
+<p class="text-base font-semibold text-neutral-800 dark:text-neutral-200">Book Club</p>
+<p class="text-sm text-neutral-500 dark:text-neutral-400">5 members · <span class="text-red-500">-$50</span></p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrIXdlifQudDwW9slrmIEX89BwPDP00wBFIKpyI40BOo5o6MfTrXUjn_MdTADpmf97NeD41Cw66drR_TBmgqe2FqF7Voa53zGVRCRPeLLg7z83GTz_-QUi4-MkJpz6FWix39hvpe02JMDVVp7FBuFbbhNhRoEbjiA2mQQdpKDFF1IAMgxLL0x8OH4SnPj1YLFc6yXyXIT5t7RZNfAYWEXUmAesH_P3_5i2qzIxls7cHsI-EL3d_YzDcqNCF5ZaEUwMkjVj0F49G58");'></div>
+<div>
+<p class="text-base font-semibold text-neutral-800 dark:text-neutral-200">Hiking Buddies</p>
+<p class="text-sm text-neutral-500 dark:text-neutral-400">3 members · $0</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

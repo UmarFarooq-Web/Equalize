@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design - 404 Page Not Found</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #1380ec;
+            --primary-color-hover: #0a6dcf;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+        .dark {
+            --text-primary: #ffffff;
+            --text-secondary: #9ca3af;
+            --bg-primary: #111827;
+            --bg-secondary: #1f2937;
+            --border-color: #374151;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-bg-secondary text-text-primary">
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+<header class="sticky top-0 z-10 w-full bg-bg-primary/80 backdrop-blur-md">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between border-b border-border-color">
+<div class="flex items-center gap-4">
+<div class="h-8 w-8 text-primary-color">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-text-primary">SplitBill</h1>
+</div>
+<nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-text-secondary">
+<a class="hover:text-primary-color transition-colors" href="#">Features</a>
+<a class="hover:text-primary-color transition-colors" href="#">Pricing</a>
+<a class="hover:text-primary-color transition-colors" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex h-10 items-center justify-center rounded-lg bg-bg-secondary px-4 text-sm font-semibold text-text-primary transition-colors hover:bg-border-color">Log in</button>
+<button class="flex h-10 items-center justify-center rounded-lg bg-primary-color px-4 text-sm font-semibold text-white transition-colors hover:bg-primary-color-hover">Sign Up</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex flex-1 items-center justify-center py-16 sm:py-24 lg:py-32">
+<div class="container mx-auto max-w-lg px-4 sm:px-6 lg:px-8 text-center">
+<div class="mx-auto w-full max-w-sm">
+<img alt="A person looking at a map, looking lost." class="w-full h-auto rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEmXKaSxmfymOCJm8M3EXum6Bj0Z7TjN7A-kTf2QOVVg4yN1jcVgepkkHOtqwzanyYmkiSTXkSNgtIE9TbkDY1CBx1qP5Coc42YRa_YIa2SASsnmDf0qOPnXNa73GlXEkbIc0lHlQKb4NMmY84Lsg1SBOBRApMSJIDuQYAId-EGyHJW5W_RkvcFS_w-AuayvprWdblXkDM9zs3zFXs4LZjCHh6pJdCla6I-wrUvAqAZaxZiEAeevai5HVMvYzySdG6zq6aU277Ek8"/>
+</div>
+<h2 class="mt-8 text-4xl font-extrabold tracking-tighter text-text-primary sm:text-5xl">Oops! Page Not Found</h2>
+<p class="mt-4 text-lg text-text-secondary">
+                    Looks like you've taken a wrong turn. The page you're looking for doesn't exist or has been moved.
+                </p>
+<div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="flex w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-primary-color px-6 py-3 text-base font-semibold text-white shadow-sm transition-transform hover:scale-105 hover:bg-primary-color-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-color">
+<span class="material-symbols-outlined">home</span>
+                        Go to Homepage
+                    </button>
+<div class="relative w-full sm:w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary">search</span>
+<input class="w-full rounded-lg border-border-color bg-bg-primary py-3 pl-10 pr-4 text-base text-text-primary placeholder:text-text-secondary focus:border-primary-color focus:ring-primary-color" placeholder="Search for anything..." type="search"/>
+</div>
+</div>
+<div class="mt-12 text-sm text-text-secondary">
+<p>Or, you could try one of these pages:</p>
+<div class="mt-4 flex justify-center gap-x-6 gap-y-2 flex-wrap">
+<a class="font-medium text-primary-color hover:underline" href="#">Dashboard</a>
+<a class="font-medium text-primary-color hover:underline" href="#">My Groups</a>
+<a class="font-medium text-primary-color hover:underline" href="#">Create a Bill</a>
+<a class="font-medium text-primary-color hover:underline" href="#">Help Center</a>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

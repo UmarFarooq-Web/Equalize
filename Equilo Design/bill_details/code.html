@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>SplitBill - Bill Details</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #141414;
+        --background-light: #f8f9fa;
+        --background-dark: #121212;
+        --text-light: #141414;
+        --text-dark: #ffffff;
+        --muted-light: #6c757d;
+        --muted-dark: #adb5bd;
+        --border-light: #e9ecef;
+        --border-dark: #343a40;
+      }
+      .dark {
+        --background-light: #121212;
+        --background-dark: #f8f9fa;
+        --text-light: #ffffff;
+        --text-dark: #141414;
+        --muted-light: #adb5bd;
+        --muted-dark: #6c757d;
+        --border-light: #343a40;
+        --border-dark: #e9ecef;
+      }
+      .btn-primary {
+        @apply bg-[var(--primary-color)] text-white hover:opacity-90 transition-opacity;
+      }
+      .btn-secondary {
+        @apply bg-[var(--border-light)] text-[var(--text-light)] hover:bg-opacity-80 transition-opacity;
+      }
+    </style>
+</head>
+<body class="bg-[var(--background-light)] text-[var(--text-light)]" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+<div class="flex min-h-screen flex-col">
+<header class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-[var(--border-light)] bg-[var(--background-light)] px-4 sm:px-6 lg:px-10 py-3 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold tracking-tighter">SplitBill</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-[var(--muted-light)] hover:text-[var(--text-light)] transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium text-[var(--muted-light)] hover:text-[var(--text-light)] transition-colors" href="#">Friends</a>
+<a class="text-sm font-medium text-[var(--muted-light)] hover:text-[var(--text-light)] transition-colors" href="#">Groups</a>
+<a class="text-sm font-medium text-[var(--muted-light)] hover:text-[var(--text-light)] transition-colors" href="#">Activity</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="relative rounded-full p-2 hover:bg-[var(--border-light)] transition-colors">
+<span class="material-symbols-outlined"> notifications </span>
+<span class="absolute top-1 right-1 h-2 w-2 rounded-full bg-red-500"></span>
+</button>
+<div class="h-10 w-10 rounded-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvFUXLOgKlSUsFxTakoX7odqknEgfKHeb13vxyMujDy_A-xNZ7p2FawGUjMFIfLemMyZunq7O_pa5EOi_VeVwreDi-L2btWmmhFXW7YV3zEp8mbmEo0Zqgx0ahqOzHlTADcqKyKcYVE3m0SD8Xdiowr1wKSagi8mC-WI3U4_XGQ_YIegJciJF85j0ssQDvUJGSzI8mk8dpD8VNxh_m8c5rCZKW4xzJ54-h4omSfRPJXIg88jAFW4pnqdbeVkRMJ2QzlzooE7obsEU");'></div>
+</div>
+</header>
+<main class="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-8">
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-sm text-[var(--muted-light)]">
+<a class="hover:text-[var(--text-light)]" href="#">Weekend Trip</a>
+<span class="material-symbols-outlined text-base">chevron_right</span>
+<span>Bill Details</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Dinner at The Italian Place</h2>
+<p class="text-sm text-[var(--muted-light)]">Added by Sarah on July 15, 2024</p>
+</div>
+<div class="border-b border-[var(--border-light)]">
+<nav aria-label="Tabs" class="-mb-px flex space-x-8">
+<a class="border-b-2 border-[var(--primary-color)] text-[var(--primary-color)] whitespace-nowrap py-4 px-1 text-sm font-semibold" href="#"> Details </a>
+<a class="border-transparent text-[var(--muted-light)] hover:text-[var(--text-light)] hover:border-gray-300 whitespace-nowrap py-4 px-1 text-sm font-medium" href="#"> Activity </a>
+</nav>
+</div>
+<div class="space-y-6">
+<div>
+<h3 class="text-xl font-bold mb-4">Receipt</h3>
+<div class="aspect-[4/3] w-full rounded-lg overflow-hidden shadow-md">
+<div class="h-full w-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1yMxTBvD9gT7Njbd95aX0KjX6thFt8lolvIsNffhZGYaqAsItVq5AS7VtDUVoV7aeDAJRbDGWdSFylvFGdoaVabgr5HBqSQ-eTY7LtnUehgJDtWp257APssLkBrdiJXwLVME98XtPAgiRkxz0-RLH3FvNWH35F85mNlAQA1TZcZIF2PUzuG8Vh61i0q-yuGaoqTue6xIpIFicwNA9juWv1UuB6gmXVKEzpy9VweUMNs_mBZ5k6oXB9_54WKamgdPKKSpfGTWwwyA");'></div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Bill Breakdown</h3>
+<div class="divide-y divide-[var(--border-light)] rounded-lg border border-[var(--border-light)] bg-white/50 shadow-sm">
+<div class="grid grid-cols-2 gap-4 p-4">
+<p class="text-[var(--muted-light)] text-sm">Total Amount</p>
+<p class="text-right font-medium text-lg">$120.00</p>
+</div>
+<div class="grid grid-cols-2 gap-4 p-4 bg-blue-50/50">
+<p class="text-blue-800 text-sm font-semibold">Your Share</p>
+<p class="text-right font-bold text-lg text-blue-800">$40.00</p>
+</div>
+<div class="grid grid-cols-2 gap-4 p-4">
+<p class="text-[var(--muted-light)] text-sm">You Owe</p>
+<p class="text-right font-medium text-lg text-red-600">$40.00</p>
+</div>
+<div class="grid grid-cols-2 gap-4 p-4">
+<p class="text-[var(--muted-light)] text-sm">Status</p>
+<span class="text-right font-medium text-sm inline-flex items-center justify-end gap-1.5 rounded-full px-2 py-1 bg-yellow-100 text-yellow-800">
+<svg class="h-2.5 w-2.5" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3"></circle></svg>
+                      Unsettled
+                    </span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Participants</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-4 rounded-lg border border-[var(--border-light)] p-3">
+<div class="h-12 w-12 rounded-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDk7R8tEghF4GffUAVHWYX3Q2MhAPaRXSEQI8TaeolJ5gO2USz7K4-FVwkPfSdRtYp6DMGcdgertMsJG_NYwLNJAYbFs1vrQjixS81x5axQe7XV4HeYuwHBSH7yvcTuwk-73whDwaSiiwMgYZzGzz7WI2mueDXGzmRDPwZVA0KOtt_Elj6Z7X2jOC4bveCCxt_5KPqsqHJ55nhIUSuwYqSdPsGRe9Cx_mKQEB8gHuIooS0EeeHFzm1AF4gKl4Qx6PDeaT6OaKYOHE");'></div>
+<div class="flex-1">
+<p class="font-semibold">Sarah</p>
+<p class="text-sm text-green-600">Paid $40.00</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg border border-[var(--border-light)] p-3">
+<div class="h-12 w-12 rounded-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJv4c5oplXE4HKJoG9DEnlwRuOIoqMvsrcz3bXf2F0HVfPVjy188jgaho00uNK79iT2RngForQeN_TQtkerFALW_1Hxy50mKA-l2U7gu4ioZgoDxr1uLBJWrGdxJSk0JjhS9ComX-6l2Lf_MnAxW9fc3wrF-TeC4OumK1G2OPmJ6PllYUSCDu-m9_YIDFWqVE6w7BIoierJp24zHQrZCZsSSdOQfk6KuwSAfGjTfoZArHkZIz9_aMGlmDNfGYGRYNWdgUQ9X2M9cc");'></div>
+<div class="flex-1">
+<p class="font-semibold">Mark</p>
+<p class="text-sm text-red-600">Owes $40.00</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg border border-[var(--border-light)] p-3">
+<div class="h-12 w-12 rounded-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFf7H8rDfPqQYqrJSGavMO6YUXOjpGDNsAI4TEWVdfabyAPdrF2r6QoVmIPO5lNuaiBmWtbfHrskMMIfZmzpbHKr7q7txrJ12-RuIqWGIKw3Z8sriy8cRLm_MkTkjyE-LWEoifnLElipRHajInx5PnwmrUJ2dlY8XLkjU4XiQAxC0MocHzqzddrKfgi8nGNUqR7yq9Jq_ZTfd0fIhCK4Mdy-gh3ra3sKHI2cCVN26a_nRH82mbhqzn2f3fLvEvSL-SlHbluAjwIXE");'></div>
+<div class="flex-1">
+<p class="font-semibold">Emily</p>
+<p class="text-sm text-red-600">Owes $40.00</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Comments</h3>
+<div class="space-y-4">
+<div class="flex gap-3">
+<div class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAL60ba152JjXaUuylphMXUik57waKOw4VB3j7CCfziCPoxaS1PmBq6dB6m3IjMSYCWXj4DoGo1WoQ87PDBa54xpYJyjvQ7aQZkI4YGN4YS_I-FhZmPkdk5ayWxD5BHRzvs98TnUQA3arAFMtcZbFf5Tc1fFHIEhH-zOmGJpNr2Li2NBbY42yYFL8WFsTQ8fXFCqTKsd24rF4g6L8iD0-T-HRccK2lz--f_d2Mq9jgnevKRz88vtaXdsLbG4uoyDiR0bW8-DW0rOGg");'></div>
+<div class="flex-1 rounded-lg border border-[var(--border-light)] p-3">
+<div class="flex justify-between items-center mb-1">
+<p class="font-semibold text-sm">Sarah</p>
+<p class="text-xs text-[var(--muted-light)]">July 15, 2024</p>
+</div>
+<p class="text-sm">Great dinner, everyone!</p>
+</div>
+</div>
+<div class="flex items-start gap-3 pt-4">
+<div class="h-10 w-10 shrink-0 rounded-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB6KjWC8oJ4diR2-DWdbaVJ5GC9Us-0KotD8g-eXU5dci23EGpsLko-h8Ozxfx1vz7FOwRzRqjlLmaFH29M-hhok6KSm9JUwrXaPRW0veDJeW6hutABpB9cWLrTUHrND5rmzz3SvfEKoNL8_XvmZQIbRKfElXmFNdvVgXeXuSUHXWPsCjzbMQlvHPj19t6JIBvfrzU8cQVyDuQhgopW0GkJ7WNxTINl3v1YLp-oiSUprRJdnWDksHTUTguBi_XMz2GoHt7QjLWwY8E");'></div>
+<div class="flex-1">
+<form class="relative">
+<textarea class="form-textarea w-full resize-none rounded-lg border border-[var(--border-light)] bg-white/80 p-3 pr-24 text-sm focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/20" placeholder="Add a comment..." rows="3"></textarea>
+<button class="absolute bottom-2 right-2 btn-primary rounded-md px-4 py-1.5 text-sm font-semibold" type="submit">Send</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="space-y-8 lg:sticky lg:top-28 self-start">
+<div class="rounded-lg border border-[var(--border-light)] bg-white/50 shadow-sm p-6">
+<h3 class="text-xl font-bold mb-4">Actions</h3>
+<div class="space-y-2">
+<a class="flex items-center gap-3 rounded-lg p-3 hover:bg-[var(--border-light)] transition-colors" href="#">
+<span class="material-symbols-outlined text-[var(--muted-light)]">edit</span>
+<span class="font-medium text-sm">Edit</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg p-3 hover:bg-[var(--border-light)] transition-colors" href="#">
+<span class="material-symbols-outlined text-[var(--muted-light)]">content_copy</span>
+<span class="font-medium text-sm">Duplicate</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg p-3 hover:bg-[var(--border-light)] transition-colors" href="#">
+<span class="material-symbols-outlined text-[var(--muted-light)]">check_circle</span>
+<span class="font-medium text-sm">Mark as Settled</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg p-3 hover:bg-[var(--border-light)] transition-colors" href="#">
+<span class="material-symbols-outlined text-[var(--muted-light)]">payments</span>
+<span class="font-medium text-sm">Partial Payment</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg p-3 hover:bg-[var(--border-light)] transition-colors" href="#">
+<span class="material-symbols-outlined text-[var(--muted-light)]">attachment</span>
+<span class="font-medium text-sm">Attach Proof</span>
+</a>
+</div>
+</div>
+<div class="rounded-lg border border-[var(--border-light)] bg-white/50 shadow-sm p-6">
+<h3 class="text-xl font-bold mb-4">Change Log</h3>
+<div class="flow-root">
+<ul class="-mb-8" role="list">
+<li>
+<div class="relative pb-8">
+<span aria-hidden="true" class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-[var(--border-light)]"></span>
+<div class="relative flex space-x-3 items-center">
+<div>
+<span class="h-8 w-8 rounded-full bg-[var(--border-light)] flex items-center justify-center ring-4 ring-white/50">
+<span class="material-symbols-outlined text-[var(--muted-light)] text-base">receipt_long</span>
+</span>
+</div>
+<div class="min-w-0 flex-1">
+<p class="text-sm font-medium">Bill created</p>
+<p class="text-xs text-[var(--muted-light)]">July 15, 2024</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="relative">
+<div class="relative flex space-x-3 items-center">
+<div>
+<span class="h-8 w-8 rounded-full bg-[var(--border-light)] flex items-center justify-center ring-4 ring-white/50">
+<span class="material-symbols-outlined text-[var(--muted-light)] text-base">person_add</span>
+</span>
+</div>
+<div class="min-w-0 flex-1">
+<p class="text-sm font-medium">Sarah added the bill</p>
+<p class="text-xs text-[var(--muted-light)]">July 15, 2024</p>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</div>
+
+</body></html>
