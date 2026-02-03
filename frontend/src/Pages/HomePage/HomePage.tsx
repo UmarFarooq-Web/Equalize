@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar"
+import Navbar from "./Navbar"
 import EndSection from "./EndSection"
 import FAQSection from "./FAQSection"
 import Footer from "./Footer"
@@ -10,7 +10,7 @@ import WorkSection from "./WorkSection"
 const HomePage = () => {
   return (
     <div className="">
-      {/* <Navbar /> */}
+      <Navbar />
       <HeroSection />
       <WorkSection />
       <SecuritySection />
