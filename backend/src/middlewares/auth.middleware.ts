@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express"
-import jwt,{ JwtPayload } from "jsonwebtoken"
+import jwt, { JwtPayload } from "jsonwebtoken"
 import { Session } from "../models/session.model"
 
 
@@ -7,8 +7,6 @@ import { Session } from "../models/session.model"
 
 
 const authenticate = async (req: Request, res: Response, next: NextFunction) => {
-
-
     try {
 
         const authHeader = req.headers.authorization
@@ -17,7 +15,7 @@ const authenticate = async (req: Request, res: Response, next: NextFunction) => 
             return res.status(401).json({ message: "Invalid Access Token" })
         }
 
-        const accessToken = authHeader.split("")[1];
+        const accessToken = authHeader.split(" ")[1];
 
         let decodedPayload = null;
 
@@ -39,6 +37,7 @@ const authenticate = async (req: Request, res: Response, next: NextFunction) => 
         }
 
         const session = await Session.findById(decodedPayload.id)
+        console.log(decodedPayload)
 
         if (!session) {
             return res.status(401).json({ message: "Invalid Access Token" })
@@ -48,12 +47,12 @@ const authenticate = async (req: Request, res: Response, next: NextFunction) => 
 
         next();
 
-    }catch(error){
-        console.log("Error in auth.middleware.authenticate : " , error)
-        res.status(500).json({message:"Internal Server Error"})
+    } catch (error) {
+        console.log("Error in auth.middleware.authenticate : ", error)
+        res.status(500).json({ message: "Internal Server Error" })
     }
 
 }
 
 
-export default {authenticate}
+export default { authenticate }

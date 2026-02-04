@@ -13,10 +13,13 @@ const login = async (req: Request, res: Response) => {
             return res.status(401).json({ message: "Invalid credentials" })
         }
 
+        console.log("Email : " , email)
+        console.log("Password : " , password)
+
         const user = await User.findOne({ email });
 
         if (!user) {
-            return res.status(401).json({ message: "Invalid credentials" })
+            return res.status(401).json({ message: "Invalid credentials " })
         }
 
         const isMatch = await bcrypt.compare(password, user.password);
@@ -82,19 +85,28 @@ const signup = async (req: Request, res: Response) => {
             return res.status(409).json({ message: "Email already exists" })
         }
 
+        const hashedPawword = await bcrypt.hash(password , 10)
+
         const user = new User({
             name,
             email,
-            password
+            password:hashedPawword
         })
 
         const accessToken = generateAccessToken(user);
-        const refreshToken = generateAccessToken(user);
+        const refreshToken = generateRefreshToken(user);
 
 
         user.refresh_token = refreshToken;
 
-        await user.save()
+        const savedUser = await user.save()
+
+        const session = new Session({
+            userId:savedUser._id,
+            accessToken:accessToken
+        })
+
+        await session.save();
 
         res.cookie("refresh-token", refreshToken, {
             httpOnly: true,
@@ -120,19 +132,24 @@ const user = async(req:Request, res:Response)=>{
     }
     try {
         const user = req.user
-        // const user = await User.find({_id:id , email});
+        const fetchedUser = await User.findById(user.id).select("-password -refresh_token -__v");
 
 
-        if(!user){
+        if(!fetchedUser){
             return res.status(404).json({message:"User not found"})
         }
 
 
-        res.status(200).json({success:true , user})
+        res.status(200).json({success:true , fetchedUser})
     } catch (error) {
         
     }
 }
 
 
-export default { login , signup}
+const refresh = (req:Request , res:Response) =>{
+
+}
+
+
+export default { login , signup ,  user , refresh}
